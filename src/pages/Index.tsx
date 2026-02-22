@@ -30,14 +30,10 @@ const Index = () => {
                 Get hands-on learning from AI industry experts who build with AI every day.
               </motion.p>
               <motion.div variants={fadeUp} custom={2} className="mt-8 flex flex-wrap gap-4">
-                <Link to="/enrollment">
-                  <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold text-base px-8 py-6 shadow-lg hover:opacity-90">
-                    Enroll in Youth Program
-                  </Button>
-                </Link>
+
                 <Link to="/contact">
                   <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold px-8 py-6">
-                    Try a Free Workshop
+                    Enroll Now
                   </Button>
                 </Link>
               </motion.div>
@@ -85,7 +81,7 @@ const Index = () => {
               },
               {
                 title: "AI Native Thinking",
-                items: ["Problem-solving partnerships", "Workflow integration", "Critical evaluation"],
+                items: ["Problem-solving partnerships", "Workflow integration", "Agentic Intelligence"],
                 color: "bg-primary text-primary-foreground ring-2 ring-secondary",
                 highlight: true,
               },
@@ -105,8 +101,8 @@ const Index = () => {
           </div>
 
           <div className="mt-6 mb-0 text-center font-heading text-lg font-semibold text-primary">
-            <p>We don't teach kids to use ChatGPT.</p>
-            <p className="mt-1">We teach them AI-native thinking: how to ethically leverage AI agents to bring their boldest ideas to life in hours, not months.</p>
+            <p>Think beyond Chat GPT.</p>
+            <p className="mt-1">We teach AI-native thinking: how to leverage AI agents to bring your boldest ideas to life in hours, not months.</p>
           </div>
         </div>
       </section>
@@ -123,15 +119,15 @@ const Index = () => {
           <div className="mt-12 rounded-2xl bg-surface p-8 shadow-lg border border-border">
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <span className="rounded-full gradient-primary px-4 py-1 text-sm font-bold text-primary-foreground">ACTIVE — Middle School</span>
-              <span className="text-sm text-muted-foreground">Live Online · Weekly or Summer Camp · Small Groups</span>
+              <span className="text-sm font-bold text-muted-foreground">Live Online · Coming Up Spring Break Camp 2026</span>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2">
               {[
-                { icon: Brain, title: "Problem-Based Learning", desc: "Students solve real challenges, not just complete tutorials" },
+                { icon: Brain, title: "Head Start in AI", desc: "Gain the mindset of an AI-native thinker" },
                 { icon: Briefcase, title: "Industry Expert Instructors", desc: "Learn from tech professionals who build with AI daily" },
                 { icon: ShieldCheck, title: "Ethical AI Foundation", desc: "Critical thinking and responsible AI use in every lesson" },
-                { icon: FolderOpen, title: "Portfolio of Projects", desc: "Students complete 5+ hands-on projects they can showcase" },
+                { icon: FolderOpen, title: "Hands-On Projects", desc: "Build real-world applications and AI Agents" },
               ].map(({ icon: Icon, title, desc }) => (
                 <div key={title} className="flex gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
@@ -150,9 +146,9 @@ const Index = () => {
               <ul className="grid gap-2 sm:grid-cols-2 text-sm">
                 {[
                   "Understand the difference between using AI tools and thinking AI native",
-                  "Identify problems where AI can provide meaningful assistance",
                   "Critically evaluate AI outputs for accuracy and appropriateness",
-                  "Complete complex projects using AI as a collaborative partner",
+                  "Build real-world apps and AI Agents to showcase",
+                  "Identify problems where AI can provide meaningful assistance"
                 ].map((o) => (
                   <li key={o} className="flex items-start gap-2"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-success" />{o}</li>
                 ))}
@@ -160,13 +156,9 @@ const Index = () => {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link to="/enrollment">
-                <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold px-8 py-6 hover:opacity-90">
-                  Enroll in Middle School Program
-                </Button>
-              </Link>
+
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Try Free Workshop</Button>
+                <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Enroll For Spring Break Camp</Button>
               </Link>
               <Link to="/youth-programs" className="text-sm font-semibold text-primary hover:underline flex items-center gap-1">
                 View Full Curriculum <ArrowRight size={14} />
@@ -174,27 +166,6 @@ const Index = () => {
             </div>
           </div>
 
-          {/* High School - Secondary */}
-          <div className="mt-8 rounded-2xl border-2 border-dashed border-secondary/40 bg-secondary/5 p-8">
-            <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="rounded-full bg-secondary/20 px-4 py-1 text-sm font-bold text-secondary">Launching Fall 2026</span>
-            </div>
-            <h3 className="text-2xl font-bold">Also Coming: High School Program</h3>
-            <p className="mt-2 text-muted-foreground">For 9th–12th graders ready for advanced AI native training.</p>
-            <ul className="mt-4 grid gap-2 sm:grid-cols-2 text-sm">
-              {["Advanced technical depth", "College essay & portfolio support", "1:1 mentorship from tech professionals", "Career exploration in AI/tech"].map((item) => (
-                <li key={item} className="flex items-center gap-2"><CheckCircle2 size={16} className="text-secondary" />{item}</li>
-              ))}
-            </ul>
-            <div className="mt-6 flex flex-wrap gap-4">
-              <Link to="/contact">
-                <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary/10 font-semibold">Join Waitlist</Button>
-              </Link>
-              <Link to="/youth-programs#high-school" className="text-sm font-semibold text-secondary hover:underline flex items-center gap-1">
-                Learn More <ArrowRight size={14} />
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -233,7 +204,7 @@ const Index = () => {
                     "Problem-based training (not just tools)",
                     "Measurable ROI and outcomes",
                     "Customized to your industry",
-                    "Taught by tech practitioners",
+                    "Taught by tech experts",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-accent" />{item}</li>
                   ))}
@@ -246,7 +217,7 @@ const Index = () => {
                 { icon: BookOpen, label: "Executive workshops" },
                 { icon: Users, label: "Team training programs" },
                 { icon: Target, label: "Custom curriculum" },
-                { icon: Monitor, label: "Online, nationwide" },
+                { icon: Monitor, label: "Online, In-Person" },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-3 rounded-lg bg-surface p-4 border border-border">
                   <Icon size={20} className="text-accent shrink-0" />
@@ -259,12 +230,11 @@ const Index = () => {
             <div className="mt-8 rounded-xl gradient-accent p-6 text-accent-foreground">
               <div className="flex items-center gap-2 mb-2">
                 <Rocket size={20} />
-                <h4 className="font-bold text-lg">Limited Pilot Opportunities (Late 2026)</h4>
+                <h4 className="font-bold text-lg">Fall Cohort – August 2026 </h4>
               </div>
               <p className="text-sm opacity-90">
-                We'll select 2–3 companies for deeply discounted pilot programs. Pilot clients receive 40–50% off, direct founder access, and help shape our corporate offering.
-              </p>
-            </div>
+                Selected partners receive preferred pricing, direct access to the founder, and hands-on collaboration to embed AI strategically across their organization. This is an opportunity to move ahead of the market — not just experimenting with AI, but integrating it where it drives real impact.</p>
+                </div>
 
             {/* CTAs - SAME SIZE as Youth CTAs */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -276,9 +246,9 @@ const Index = () => {
               <Link to="/corporate-training">
                 <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Learn More About Corporate Training</Button>
               </Link>
-              <Link to="/corporate-training#pilot" className="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+              {/* <Link to="/corporate-training#pilot" className="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                 Apply for Pilot <ArrowRight size={14} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 

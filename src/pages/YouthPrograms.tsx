@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import {
   GraduationCap, Monitor, Users, Brain, ShieldCheck, FolderOpen,
   CheckCircle2, ArrowRight, Briefcase, BookOpen, Lightbulb, Palette,
-  Search, Zap, Award, Star, ChevronDown
+  Search, Zap, Award, Star, ChevronDown, Bot, Rocket, Gamepad2, Sparkles, Trophy
 } from "lucide-react";
 import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger
@@ -82,15 +82,54 @@ const YouthPrograms = () => {
                 ))}
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Link to="/enrollment">
-                  <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold px-8 py-6 hover:opacity-90">Enroll Now</Button>
-                </Link>
+
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold px-8 py-6">Try Free Workshop</Button>
+                  <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold px-8 py-6">Enroll for Spring Break Camp 2026</Button>
                 </Link>
               </div>
             </div>
             <img src={heroImg} alt="Students collaborating" className="rounded-2xl shadow-2xl w-full object-cover aspect-video" />
+          </div>
+        </div>
+      </section>
+
+      {/* Robot Mascot / Fun Banner */}
+      <section className="bg-gradient-to-r from-secondary/10 via-primary/5 to-secondary/10 border-y border-secondary/20 py-10 px-4">
+        <div className="container-narrow">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            {/* Robot mascot */}
+            <div className="flex-shrink-0">
+              <div className="relative">
+                <div className="w-28 h-28 rounded-3xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center shadow-xl">
+                  <Bot size={56} className="text-white" />
+                </div>
+                {/* Floating sparkles */}
+                <span className="absolute -top-2 -right-2 text-2xl animate-bounce">✨</span>
+                <span className="absolute -bottom-1 -left-2 text-xl animate-pulse">🤖</span>
+              </div>
+            </div>
+            {/* Text */}
+            <div className="flex-1 text-center md:text-left">
+              <div className="inline-flex items-center gap-2 rounded-full bg-secondary/20 px-4 py-1 text-sm font-bold text-secondary mb-3">
+                <Sparkles size={14} /> Meet Your AI Learning Buddy!
+              </div>
+              <h2 className="text-2xl font-bold">Learn AI the Fun Way — Build Real Stuff! 🚀</h2>
+              <p className="mt-2 text-muted-foreground">No boring lectures. You'll create apps, AI Agents, Machine Learning Projects, and more — all powered by AI. Your ideas, supercharged.</p>
+            </div>
+            {/* Fun achievement badges */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                { emoji: "🎮", label: "Build Apps" },
+                { emoji: "🎨", label: "Create AI Agents" },
+                { emoji: "🔬", label: "Train ML Models" },
+                { emoji: "🏆", label: "Earn Certificate" },
+              ].map(({ emoji, label }) => (
+                <div key={label} className="flex flex-col items-center gap-1 rounded-2xl bg-surface border border-border px-4 py-3 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
+                  <span className="text-2xl">{emoji}</span>
+                  <span className="text-xs font-semibold text-muted-foreground">{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -113,16 +152,16 @@ const YouthPrograms = () => {
             {/* Summer */}
             <div className="rounded-2xl border border-border bg-surface p-8">
               <span className="inline-block rounded-full bg-secondary/10 px-3 py-1 text-xs font-bold text-secondary mb-4">Option B</span>
-              <h3 className="text-xl font-bold">Summer Camp</h3>
+              <h3 className="text-xl font-bold">Spring Break Camp 2026</h3>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                <li><strong>Duration:</strong> 2 weeks intensive</li>
-                <li><strong>Schedule:</strong> Monday–Friday daily sessions</li>
-                <li><strong>Best for:</strong> Immersive summer learning experience</li>
+                <li><strong>Duration:</strong> 1 week intensive</li>
+                <li><strong>Schedule:</strong> April 6 - April 10 2026 | 2:30 PM - 4:00 PM</li>
+                <li><strong>Best for:</strong> AI Imersive spring learning experience</li>
               </ul>
             </div>
           </div>
           <div className="mt-8 rounded-xl bg-surface-alt p-6 text-center text-sm text-muted-foreground">
-            <strong>Requirements:</strong> Computer with internet (Mac or PC) · Webcam & microphone · No special software needed
+            <strong>Requirements:</strong> Computer with internet (Mac or PC) · Webcam & microphone 
           </div>
         </div>
       </section>
@@ -281,23 +320,6 @@ const YouthPrograms = () => {
         </div>
       </section>
 
-      {/* High School */}
-      <section id="high-school" className="section-padding bg-surface">
-        <div className="container-narrow max-w-4xl">
-          <div className="rounded-2xl border-2 border-dashed border-secondary/40 bg-secondary/5 p-8 text-center">
-            <span className="inline-block rounded-full bg-secondary/20 px-4 py-1 text-sm font-bold text-secondary mb-4">Launching Fall 2026</span>
-            <h2 className="text-3xl font-bold">High School Program Coming Soon</h2>
-            <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-              For 9th–12th graders. Advanced curriculum, college application support, career exploration, and industry mentorship.
-            </p>
-            <div className="mt-6">
-              <Link to="/contact">
-                <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary/10 font-semibold">Join Waitlist</Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="section-padding gradient-primary text-primary-foreground text-center">
@@ -305,9 +327,7 @@ const YouthPrograms = () => {
           <h2 className="text-3xl font-bold md:text-4xl">Ready to Start?</h2>
           <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">Join our next cohort and give your child the AI native skills they need to thrive.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link to="/enrollment">
-              <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold px-8 py-6 hover:opacity-90">Enroll Now</Button>
-            </Link>
+
             <Link to="/contact">
               <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold px-8 py-6">Contact Us</Button>
             </Link>

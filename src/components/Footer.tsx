@@ -30,7 +30,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm opacity-90">
               <li><Link to="/youth-programs" className="hover:underline">Youth Overview</Link></li>
               <li><Link to="/youth-programs" className="hover:underline">Middle School</Link></li>
-              <li><Link to="/youth-programs#high-school" className="hover:underline">High School (Coming Soon)</Link></li>
+
               <li><Link to="/corporate-training" className="hover:underline">Corporate Training</Link></li>
               <li><Link to="/corporate-training#pilot" className="hover:underline">Pilot Program</Link></li>
             </ul>
@@ -42,7 +42,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm opacity-90">
               <li><Link to="/youth-programs#faq" className="hover:underline">FAQ</Link></li>
               <li><Link to="/youth-programs#parents" className="hover:underline">Parent Resources</Link></li>
-              <li><Link to="/enrollment" className="hover:underline">Enrollment Process</Link></li>
+
             </ul>
           </div>
 

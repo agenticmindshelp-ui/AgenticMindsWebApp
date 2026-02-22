@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/logo.svg";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -35,22 +35,15 @@ const Navbar = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted ${
-                  location.pathname === link.to ? "text-primary font-semibold" : "text-muted-foreground"
-                }`}
+                className={`rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted ${location.pathname === link.to ? "text-primary font-semibold" : "text-muted-foreground"
+                  }`}
               >
                 {link.label}
               </Link>
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-3">
-            <Link to="/enrollment">
-              <Button className="gradient-accent border-0 text-accent-foreground font-semibold shadow-md hover:opacity-90">
-                Enroll Now
-              </Button>
-            </Link>
-          </div>
+
 
           {/* Mobile toggle */}
           <button
@@ -78,18 +71,13 @@ const Navbar = () => {
                   key={link.to}
                   to={link.to}
                   onClick={() => setMobileOpen(false)}
-                  className={`w-full rounded-lg px-4 py-3 text-center text-lg font-medium transition-colors hover:bg-muted ${
-                    location.pathname === link.to ? "text-primary bg-muted font-semibold" : "text-foreground"
-                  }`}
+                  className={`w-full rounded-lg px-4 py-3 text-center text-lg font-medium transition-colors hover:bg-muted ${location.pathname === link.to ? "text-primary bg-muted font-semibold" : "text-foreground"
+                    }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Link to="/enrollment" onClick={() => setMobileOpen(false)} className="w-full mt-4">
-                <Button className="w-full gradient-accent border-0 text-accent-foreground font-semibold text-lg py-6">
-                  Enroll Now
-                </Button>
-              </Link>
+
             </nav>
           </motion.div>
         )}
