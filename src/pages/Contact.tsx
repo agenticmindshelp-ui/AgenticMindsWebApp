@@ -22,7 +22,7 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <div className="mb-8">
                 <h2 className="text-2xl font-bold">Send Us a Message</h2>
-                <p className="text-muted-foreground mt-2">Fill out the form below and we'll get back to you as soon as possible.</p>
+                <p className="text-muted-foreground mt-2">Want to Enroll or Have Any Questions about our program? Fill out the form and we'll get back to you as soon as possible.</p>
               </div>
               <div className="w-full overflow-hidden rounded-2xl border border-border shadow-sm bg-white">
                 <iframe
@@ -80,7 +80,7 @@ const Contact = () => {
                 <h3 className="font-bold mb-4">Service Area</h3>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <p><strong>Youth Programs:</strong> Bay Area (online)</p>
-                  <p><strong>Corporate:</strong> Nationwide (online)</p>
+                  <p><strong>Corporate:</strong> Nationwide (online and in-person)</p>
                 </div>
               </div>
 

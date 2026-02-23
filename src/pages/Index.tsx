@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import {
   GraduationCap, Monitor, Users, Brain, ShieldCheck, FolderOpen,
   Building2, Lightbulb, Target, BarChart3, Briefcase, Rocket,
-  CheckCircle2, ArrowRight, Zap, BookOpen, Award
+  CheckCircle2, ArrowRight, Zap, BookOpen, Award,
+  Eye
 } from "lucide-react";
-import heroImg from "@/assets/hero-students.jpg";
+import heroImg from "@/assets/Hero-adultsnstudents2.jpg";
 import corpImg from "@/assets/corporate-team.jpg";
 
 const fadeUp = {
@@ -39,9 +40,10 @@ const Index = () => {
               </motion.div>
               <motion.div variants={fadeUp} custom={3} className="mt-10 flex flex-wrap gap-x-6 gap-y-4">
                 {[
-                  { icon: Award, text: "AI Industry Experts" },
+                  { icon: Award, text: "AI Industry Expert Instructors" },
                   { icon: Monitor, text: "Live Online Learning" },
-                  { icon: Zap, text: "Bay Area's Premier AI Educators" },
+                  { icon: Eye, text: "Ethical AI Foundations" },
+                   { icon: Target, text: "Results-Focused Learning" },
                 ].map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-center gap-2 text-sm opacity-85">
                     <Icon size={18} className="shrink-0" />
@@ -118,8 +120,8 @@ const Index = () => {
           {/* Middle School - Primary */}
           <div className="mt-12 rounded-2xl bg-surface p-8 shadow-lg border border-border">
             <div className="flex flex-wrap items-center gap-3 mb-6">
-              <span className="rounded-full gradient-primary px-4 py-1 text-sm font-bold text-primary-foreground">ACTIVE — Middle School</span>
-              <span className="text-sm font-bold text-muted-foreground">Live Online · Coming Up Spring Break Camp 2026</span>
+              <span className="rounded-full gradient-primary px-4 py-1 text-sm font-bold text-primary-foreground">SPRING BREAK CAMP 2026</span>
+              <span className="text-sm font-bold text-muted-foreground">For 5th - 8th Graders | Apr 6th - Apr 10th, 2026 | 2:30PM - 4:00PM </span>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2">
@@ -173,7 +175,7 @@ const Index = () => {
       <section className="section-padding bg-surface">
         <div className="container-narrow">
           <div className="text-center">
-            <span className="inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-semibold text-accent">Coming Fall 2026</span>
+            <span className="inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-semibold text-accent">Coming Summer 2026</span>
             <h2 className="mt-4 text-3xl font-bold md:text-4xl">Corporate Training: Transform Your Team Into AI Native Leaders</h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground text-lg">
               We're launching customized corporate training for small and medium sized businesses ready to transform how their teams work.
@@ -230,7 +232,7 @@ const Index = () => {
             <div className="mt-8 rounded-xl gradient-accent p-6 text-accent-foreground">
               <div className="flex items-center gap-2 mb-2">
                 <Rocket size={20} />
-                <h4 className="font-bold text-lg">Fall Cohort – August 2026 </h4>
+                <h4 className="font-bold text-lg">Summer Cohort – June 2026 </h4>
               </div>
               <p className="text-sm opacity-90">
                 Selected partners receive preferred pricing, direct access to the founder, and hands-on collaboration to embed AI strategically across their organization. This is an opportunity to move ahead of the market — not just experimenting with AI, but integrating it where it drives real impact.</p>

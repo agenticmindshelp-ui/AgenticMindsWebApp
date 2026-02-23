@@ -40,7 +40,7 @@ const CorporateTraining = () => {
         <div className="container-narrow relative px-4 py-20 md:py-28">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="text-primary-foreground">
-              <span className="inline-block rounded-full bg-accent/20 px-4 py-1 text-sm font-bold text-accent-foreground mb-4">Coming Fall 2026 · Join Waitlist for Early Access</span>
+              <span className="inline-block rounded-full bg-accent/20 px-4 py-1 text-sm font-bold text-accent-foreground mb-4">Coming Summer 2026 · Join Waitlist for Early Access</span>
               <h1 className="text-4xl font-bold md:text-5xl text-balance">Corporate Training: Transform Your Team Into AI Native Leaders</h1>
               <p className="mt-6 text-lg opacity-90">Practical, hands-on training for small and medium sized businesses.</p>
               <p className="mt-3 text-sm opacity-75">Built by tech industry veterans who've implemented AI native systems at scale</p>
@@ -131,18 +131,19 @@ const CorporateTraining = () => {
           <div className="rounded-2xl gradient-accent p-8 md:p-12 text-accent-foreground">
             <div className="flex items-center gap-3 mb-4">
               <Rocket size={28} />
-              <h2 className="text-2xl md:text-3xl font-bold">Be a Pilot Client — Late 2026/Early 2027</h2>
+              <h2 className="text-2xl md:text-3xl font-bold">Join the Summer 2026 cohort</h2>
             </div>
-            <p className="opacity-90">We're selecting 2–3 companies to participate in our pilot program before the full 2027 launch.</p>
+            <p className="opacity-90">We're selecting 2–3 companies to participate in our Summer 2026 program.</p>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {[
-                "Heavily discounted pricing (save 40–50%)",
-                "Direct access to founders",
                 "Customized program design for your industry",
+                "Direct access to founders",
+                "Proven frameworks built from real-world experience, not theory",
                 "Priority support and iteration",
-                "Opportunity to shape our corporate offering",
-                "Case study prominence and recognition",
-                'Exclusive "Founding Partner" status',
+                "Faster time-to-value with a structured, hands-on approach",
+                "Join a vetted peer network of like-minded founders and operators"
+                
+               
               ].map((item) => (
                 <div key={item} className="flex items-start gap-2 text-sm"><CheckCircle2 size={16} className="mt-0.5 shrink-0" />{item}</div>
               ))}
@@ -153,11 +154,11 @@ const CorporateTraining = () => {
                 <li>• SMB (50–500 employees)</li>
                 <li>• Commitment to full program participation</li>
                 <li>• Willingness to provide feedback</li>
-                <li>• Available late 2026 or Q1 2027</li>
+                <li>• Available Summer 2026</li>
                 <li>• Open to being a reference client</li>
               </ul>
             </div>
-            <p className="mt-4 text-sm font-bold">Timeline: Pilot programs begin Q4 2026. Very limited availability.</p>
+            <p className="mt-4 text-sm font-bold">Timeline: Pilot programs begin Summer 2026. Very limited availability.</p>
             <a href="#waitlist" className="mt-6 inline-block">
               <Button size="lg" className="bg-primary-foreground text-primary font-bold px-8 py-6 hover:opacity-90">Apply for Pilot Program</Button>
             </a>

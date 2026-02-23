@@ -12,34 +12,34 @@ import heroImg from "@/assets/hero-students.jpg";
 
 const modules = [
   {
-    num: 1, title: "Introduction to AI Native Thinking", weeks: "Week 1–2",
-    goals: ["Understand 'AI native' vs. 'using AI tools'", "Recognize when AI can help solve problems", "Learn basic AI interaction patterns", "Explore ethical considerations"],
-    project: "Design Your AI-Powered Learning Assistant",
-    skills: "Problem identification, AI fundamentals, critical evaluation"
+    num: 1, title: "Introduction to AI Native Thinking", weeks: "Day 1",
+    goals: ["What is Artificial Intelligence?", "When can AI help solve problems?", "Difference between human and machine intelligence", "Exploration of ethical considerations"],
+    project: "AI or Not AI? Live Quiz",
+    skills: "AI fundamentals, Analytical Reasoning, Speaking Confidence"
   },
   {
-    num: 2, title: "AI for Creative Problem Solving", weeks: "Week 3–4",
-    goals: ["Use AI as creative brainstorming partner", "Generate and refine ideas collaboratively", "Navigate copyright and originality questions"],
-    project: "Create an Original Story, Game, or Art Project",
-    skills: "Creative collaboration, idea refinement, understanding AI's creative role"
+    num: 2, title: "How Machines Learn?", weeks: "Day 2",
+    goals: ["What is Machine Learning?", "Understand concepts of training data, testing, and model accuracy", "Understand why data quality and quantity matters for AI performance"],
+    project: "Successfully train a working, image recognition, machine learning model using Google Teachable Machine",
+    skills: "Systems Thinking, Logical Reasoning, Data Quality"
   },
   {
-    num: 3, title: "AI for Research and Learning", weeks: "Week 5–7",
-    goals: ["Conduct effective research using AI", "Verify and fact-check information", "Synthesize multiple sources", "Recognize hallucinations and errors"],
-    project: "Deep Dive Research Report",
-    skills: "Research methodology, source verification, synthesis, presentation"
+    num: 3, title: "Generative AI", weeks: "Day 3",
+    goals: ["What is Generative AI?", "Understand Basics of Prompt Engineering", "Recognition of hallucinations and errors"],
+    project: "Design Your Personalized AI-Agent Learning Assistant",
+    skills: "Clear Prompting, Digital Responsibility, Fact Checking"
   },
   {
-    num: 4, title: "AI for Productivity and Organization", weeks: "Week 8–9",
-    goals: ["Optimize personal workflows", "Manage tasks and time effectively", "Automate repetitive work", "Build sustainable AI-integrated habits"],
-    project: "Personal Productivity System",
-    skills: "Workflow analysis, tool selection, habit formation, practical application"
+    num: 4, title: "AI Agents for Productivity and Organization", weeks: "Day 4",
+    goals: ["Difference between AI Agents and Chatbots", "Understand AI Agent Decision Making", "How to automate repetitive work?", "Where can autonomous agents go wrong?"],
+    project: "Build an AI Agent that understands what you need and emails you a to-do list to achieve a successful outcome",
+    skills: "Agent Understanding, Decision Sequencing, Risk Assessment"
   },
   {
-    num: 5, title: "Capstone Project", weeks: "Week 10–12",
-    goals: ["Apply all learned concepts", "Work through full problem-solving cycle", "Present completed work professionally", "Reflect on learning journey"],
-    project: "Solve a Problem That Matters to You",
-    skills: "Independent problem-solving, project management, presentation, portfolio development"
+    num: 5, title: "Vibecoding Apps", weeks: "Day 5",
+    goals: ["Understand how AI assists in generating code", "Difference between AI helping a coder vs AI coding autonomously", "How to present completed work professionally"],
+    project: "Build and launch a working website",
+    skills: "Idea Articulation, AI Industry awareness, Presentation"
   },
 ];
 
@@ -152,7 +152,7 @@ const YouthPrograms = () => {
               <span className="inline-block rounded-full bg-secondary/10 px-3 py-1 text-xs font-bold text-secondary mb-4">Option B</span>
               <h3 className="text-xl font-bold">Spring Break Camp 2026</h3>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                <li><strong>Duration:</strong> 1 week intensive</li>
+                <li><strong>Duration:</strong> 1 week online intensive</li>
                 <li><strong>Schedule:</strong> April 6 - April 10 2026 | 2:30 PM - 4:00 PM</li>
                 <li><strong>Best for:</strong> AI Imersive spring learning experience</li>
               </ul>
@@ -250,7 +250,7 @@ const YouthPrograms = () => {
             </ul>
           </div>
 
-          {/* Portfolio examples */}
+         {/* Portfolio examples
           <h3 className="mt-12 text-xl font-bold text-center">Sample Student Projects</h3>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
@@ -266,7 +266,7 @@ const YouthPrograms = () => {
                 <h4 className="text-sm font-bold">{title}</h4>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -292,15 +292,15 @@ const YouthPrograms = () => {
           <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
             {[
               {
-                name: "Lead Instructor",
-                role: "Co-Founder & Lead Instructor",
-                bg: "Previously a Senior Product Manager at a leading tech company, led AI-powered features used by millions.",
+                name: "Kanthi Santhikumar",
+                role: "Co-Founder",
+                bg: "https://www.linkedin.com/in/kanthi-santhikumar/",
                 philosophy: "The best learning happens when students solve problems they care about.",
               },
               {
-                name: "Co-Instructor",
-                role: "Co-Founder & Curriculum Director",
-                bg: "Former AI/ML engineer with extensive experience building and deploying AI systems at scale.",
+                name: "Gunjan Singh",
+                role: "Co-Founder",
+                bg: "https://www.linkedin.com/in/gunjan1983",
                 philosophy: "We need to teach the next generation to be creators with AI, not just consumers.",
               },
             ].map((inst) => (
@@ -310,7 +310,10 @@ const YouthPrograms = () => {
                 </div>
                 <h3 className="text-lg font-bold">{inst.name}</h3>
                 <p className="text-sm text-primary font-medium">{inst.role}</p>
-                <p className="mt-3 text-sm text-muted-foreground">{inst.bg}</p>
+                {/*<p className="mt-3 text-sm text-muted-foreground">{inst.bg}</p>*/}
+                <a href={inst.bg} target="_blank" rel="noreferrer" className="mt-3 text-sm text-primary underline hover:opacity-75">
+  LinkedIn Profile
+</a>
                 <p className="mt-3 text-sm italic text-muted-foreground">"{inst.philosophy}"</p>
               </div>
             ))}
@@ -323,7 +326,7 @@ const YouthPrograms = () => {
       <section className="section-padding gradient-primary text-primary-foreground text-center">
         <div className="container-narrow">
           <h2 className="text-3xl font-bold md:text-4xl">Ready to Start?</h2>
-          <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">Join our next cohort and give your child the AI native skills they need to thrive.</p>
+          <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">Join our Spring cohort and give your child the AI native skills they need to thrive.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
 
             <Link to="/contact">

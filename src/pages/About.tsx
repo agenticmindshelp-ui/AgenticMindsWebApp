@@ -39,23 +39,22 @@ const About = () => {
           </div>
         </div>
       </section>
-
       {/* Founders */}
-      <section className="section-padding bg-surface-alt">
+      {/* <section className="section-padding bg-surface-alt">
         <div className="container-narrow">
           <h2 className="text-3xl font-bold md:text-4xl text-center">Meet the Founders</h2>
           <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
             {[
               {
-                name: "Co-Founder",
-                role: "Lead Instructor",
+                name: "Kanthi Santhikumar",
+                role: "Co-Founder",
                 bg: "Spent over a decade in the tech industry, leading AI-powered product development used by millions of users.",
                 quote: "I want every student to feel the same excitement I felt when I first saw how AI could amplify creative problem-solving.",
                 expertise: ["AI product strategy", "Problem-based curriculum design", "Youth education"],
               },
               {
-                name: "Co-Founder",
-                role: "Curriculum Director",
+                name: "Gunjan Singh",
+                role: "Co-Founder",
                 bg: "Former AI/ML engineer with extensive experience building and deploying AI systems at leading technology companies.",
                 quote: "The best way to prepare for an AI-powered future is to start thinking AI native today—not tomorrow.",
                 expertise: ["AI/ML systems architecture", "Corporate training", "Technical mentorship"],
@@ -79,7 +78,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Values */}
       <section className="section-padding bg-surface">

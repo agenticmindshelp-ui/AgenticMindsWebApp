@@ -16,7 +16,7 @@ const BOT_TAGLINE = "AgenticMinds AI Assistant";
 const FAQ: { keywords: string[]; answer: string; links?: { label: string; to: string }[] }[] = [
     {
         keywords: ["price", "cost", "how much", "fee", "pricing", "tuition"],
-        answer: "Our program pricing varies by format. Please reach out via our Contact page or try a free workshop first — no commitment needed!",
+        answer: "Our program pricing varies by format. Please reach out via our Contact page for details",
         links: [{ label: "Contact Us", to: "/contact" }],
     },
     {
@@ -26,23 +26,19 @@ const FAQ: { keywords: string[]; answer: string; links?: { label: string; to: st
     },
     {
         keywords: ["schedule", "when", "time", "weekly", "summer", "camp", "session"],
-        answer: "We offer two formats:\n• **Weekly Sessions** — 1 hour/week for 12 weeks\n• **Summer Camp** — Intensive 2-week daily sessions\nBoth are live online!",
+        answer: "Our next cohort for students start on April 6th. It's 1.5 hours per day for 5 days. Please reach out using the Contact Us page to enroll.",
         links: [{ label: "View Programs", to: "/youth-programs" }],
     },
     {
         keywords: ["online", "virtual", "zoom", "format", "how does it work"],
-        answer: "All sessions are live online via video call. You just need a computer with a webcam and microphone — no special software required!",
+        answer: "All student sessions are live online via video call. You just need a computer with a webcam and microphone — no special software required! Our Corporate programs are custom-designed and hence will be online or in-person based on the needs of the business.",
     },
     {
         keywords: ["corporate", "business", "team", "company", "employee", "training", "workplace"],
-        answer: "We offer customized corporate AI training for teams of all sizes. We're launching Fall 2026 with pilot opportunities available!",
+        answer: "We offer customized corporate AI training for teams of all sizes. We're launching Summer 2026 with pilot opportunities available! Please reach out to us on the Contact Us page to sign up or learn more",
         links: [{ label: "Corporate Training", to: "/corporate-training" }],
     },
-    {
-        keywords: ["free", "workshop", "trial", "demo", "try"],
-        answer: "Yes! We offer a free introductory workshop so your child can experience our teaching style before committing. Sign up via the Contact page.",
-        links: [{ label: "Try Free Workshop", to: "/contact" }],
-    },
+
     {
         keywords: ["certificate", "diploma", "credential", "badge"],
         answer: "Students who complete the program receive an official AgenticMinds Certificate of Completion to add to their portfolio!",
@@ -58,19 +54,24 @@ const FAQ: { keywords: string[]; answer: string; links?: { label: string; to: st
     },
     {
         keywords: ["refund", "cancel", "money back", "withdraw"],
-        answer: "We offer a full refund if withdrawn before the 2nd session, and partial refunds through week 4. Contact us for details.",
+        answer: "We offer a full refund if withdrawn before Mar 30th. Contact us for details.",
         links: [{ label: "Contact Us", to: "/contact" }],
     },
     {
         keywords: ["project", "build", "create", "make", "what will", "curriculum"],
-        answer: "Students build 5+ real projects including an AI-powered learning assistant, original stories or games, a research report, and a personal productivity system. The capstone is a project of their own choosing!",
+        answer: "Students build 5+ real projects including an AI-powered learning assistant, a productivity system and a personalized website.",
         links: [{ label: "See Curriculum", to: "/youth-programs" }],
+    },
+    {
+        keywords: ["project", "build", "create", "make", "when will", "date", "start", "camp"],
+        answer: "Our next cohort for students start on April 6th. Please reach out using the Contact Us page to enroll.",
+        links: [{ label: "See Contact Us", to: "/Contact" }],
     },
 ];
 
 const QUICK_QUESTIONS = [
-    "What age group is this for?",
-    "Is there a free trial?",
+    "Do you offer summer camps?",
+    "Tell me more about the Corporate Programs",
     "How much does it cost?",
     "Is it online?",
 ];

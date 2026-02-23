@@ -4,8 +4,9 @@ import { Mail, Phone, MapPin } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container-narrow px-4 py-16">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="container-narrow px-4 py-16 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-14 lg:grid-cols-5">
+        {/*<div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5 text-center justify-items-center">*/}
           {/* Quick Links */}
           <div>
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider opacity-80">Quick Links</h4>
@@ -24,7 +25,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Programs */}
+          {/* Programs
           <div>
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider opacity-80">Programs</h4>
             <ul className="space-y-2 text-sm opacity-90">
@@ -37,14 +38,14 @@ const Footer = () => {
           </div>
 
           {/* Resources */}
-          <div>
+          {/* <div>
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider opacity-80">Resources</h4>
             <ul className="space-y-2 text-sm opacity-90">
               <li><Link to="/youth-programs#faq" className="hover:underline">FAQ</Link></li>
               <li><Link to="/youth-programs#parents" className="hover:underline">Parent Resources</Link></li>
 
             </ul>
-          </div>
+          </div>  */}
 
           {/* Connect */}
           <div>
