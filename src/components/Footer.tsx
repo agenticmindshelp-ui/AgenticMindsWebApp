@@ -70,15 +70,18 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider opacity-80">Legal</h4>
             <ul className="space-y-2 text-sm opacity-90">
-              <li><Link to="/privacy" className="hover:underline">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="hover:underline">Terms of Service</Link></li>
-              <li><Link to="/acceptable-use" className="hover:underline">Acceptable Use Policy</Link></li>
+              {/* <li><Link to="/privacy" className="hover:underline">Privacy Policy</Link></li> */}
+              <p><a href="/agenticminds-legal.html" className="hover:underline">Privacy Policy</a></p>
+              <p><a href="/agenticminds-legal.html" className="hover:underline">Terms of Service</a></p>
+              <p><a href="/agenticminds-legal.html" className="hover:underline">Acceptable Use Policy</a></p>
+              {/* <li><Link to="/terms" className="hover:underline">Terms of Service</Link></li>
+              <li><Link to="/acceptable-use" className="hover:underline">Acceptable Use Policy</Link></li> */}
             </ul>
           </div>
         </div>
 
         <div className="mt-12 border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-70">
-          <p>© {new Date().getFullYear()} AgenticMinds. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} AgenticMinds. All rights reserved. | <a href="/agenticminds-legal.html" className="hover:underline">Legal</a></p>
         </div>
       </div>
     </footer>

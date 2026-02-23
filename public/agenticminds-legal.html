@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal | AgenticMinds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --background: 220 15% 97%;
+      --foreground: 220 20% 12%;
+      --card: 0 0% 100%;
+      --primary: 215 60% 12%;
+      --primary-foreground: 0 0% 100%;
+      --secondary: 187 72% 44%;
+      --muted: 220 14% 93%;
+      --muted-foreground: 220 10% 44%;
+      --accent: 187 72% 44%;
+      --border: 220 14% 88%;
+      --radius: 0.625rem;
+      --font-heading: 'Space Grotesk', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+
+      /* shorthand resolved values for use in plain CSS */
+      --bg: hsl(220, 15%, 97%);
+      --surface: hsl(0, 0%, 100%);
+      --border-color: hsl(220, 14%, 88%);
+      --text: hsl(220, 20%, 12%);
+      --muted-text: hsl(220, 10%, 44%);
+      --accent-color: hsl(187, 72%, 44%);
+      --primary-color: hsl(215, 60%, 12%);
+      --tab-h: 56px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .wrapper { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+
+    /* ── HEADER ── */
+    header {
+      padding: 56px 0 32px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 40px;
+    }
+    .logo {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary-color);
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 28px;
+      text-decoration: none;
+    }
+    .logo span { color: var(--accent-color); }
+    header h1 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+    header h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, hsl(215, 60%, 12%), hsl(187, 72%, 44%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .meta {
+      margin-top: 14px;
+      font-size: 0.78rem;
+      color: var(--muted-text);
+      letter-spacing: 0.03em;
+    }
+
+    /* ── TABS ── */
+    .tabs {
+      display: flex; gap: 4px;
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 4px;
+      margin-bottom: 48px;
+    }
+    .tab-btn {
+      flex: 1;
+      height: var(--tab-h);
+      border: none;
+      border-radius: calc(var(--radius) - 2px);
+      background: transparent;
+      color: var(--muted-text);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .tab-btn.active {
+      background: var(--primary-color);
+      color: hsl(0, 0%, 100%);
+    }
+    .tab-btn:hover:not(.active) {
+      background: hsl(220, 14%, 93%);
+      color: var(--text);
+    }
+
+    /* ── PANEL ── */
+    .panel { display: none; }
+    .panel.active { display: block; animation: fadeUp 0.35s ease; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      margin-bottom: 24px;
+      padding: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+    }
+    .section::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: linear-gradient(180deg, hsl(215, 60%, 12%), hsl(187, 72%, 44%));
+    }
+
+    .section-num {
+      font-family: var(--font-heading);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .section h2 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .section p, .section li {
+      font-size: 0.9rem;
+      color: hsl(220, 10%, 35%);
+      line-height: 1.85;
+    }
+    .section ul { padding-left: 20px; margin-top: 10px; }
+    .section li { margin-bottom: 6px; }
+    .section strong { color: var(--text); font-weight: 600; }
+    a.inline { color: var(--accent-color); text-decoration: none; }
+    a.inline:hover { text-decoration: underline; }
+
+    /* ── CALLOUT ── */
+    .callout {
+      margin: 20px 0 0;
+      padding: 16px 20px;
+      background: hsl(187, 72%, 44%, 0.06);
+      border: 1px solid hsl(187, 72%, 44%, 0.2);
+      border-radius: calc(var(--radius) - 2px);
+      font-size: 0.85rem;
+      color: var(--muted-text);
+    }
+    .callout strong { color: var(--primary-color); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.78rem;
+      color: var(--muted-text);
+    }
+    footer a { color: var(--accent-color); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <header>
+    <a class="logo" href="https://agenticminds.net/">⬡ Agentic<span>Minds</span></a>
+    <h1>Legal <em>Documents</em></h1>
+    <p class="meta">Effective Date: February 22, 2025 &nbsp;·&nbsp; AgenticMinds LLC &nbsp;·&nbsp; <a class="inline" href="mailto:agenticmindshelp@gmail.com">agenticmindshelp@gmail.com</a></p>
+  </header>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('privacy', this)">Privacy Policy</button>
+    <button class="tab-btn" onclick="switchTab('terms', this)">Terms & Conditions</button>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--                PRIVACY POLICY              -->
+  <!-- ══════════════════════════════════════════ -->
+  <div id="privacy" class="panel active">
+
+    <div class="section">
+      <div class="section-num">§ 01</div>
+      <h2>Overview</h2>
+      <p>AgenticMinds ("we," "us," or "our") operates an AI-native training and education platform at <a class="inline" href="https://agenticminds.net">agenticminds.net</a>. This Privacy Policy explains how we collect, use, share, and protect your personal information when you visit our website, enroll in our courses, or otherwise interact with our services.</p>
+      <p style="margin-top:12px;">By using our services you agree to the data practices described herein. If you do not agree, please discontinue use.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 02</div>
+      <h2>Information We Collect</h2>
+      <p>We may collect the following categories of information:</p>
+      <ul>
+        <li><strong>Account & Identity Data</strong> — name, email address, username, and password when you register.</li>
+        <li><strong>Payment Data</strong> — billing address and transaction details processed via secure third-party payment processors (we do not store raw card numbers).</li>
+        <li><strong>Learning & Usage Data</strong> — course progress, quiz results, AI interaction logs, session duration, and feature usage within our platform.</li>
+        <li><strong>Technical Data</strong> — IP address, browser type, device identifiers, operating system, and referring URLs collected automatically via cookies and similar technologies.</li>
+        <li><strong>Communications</strong> — messages you send us via email, support forms, or community channels.</li>
+        <li><strong>AI Interaction Data</strong> — prompts, responses, and feedback submitted when using any AI-powered training features.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 03</div>
+      <h2>How We Use Your Information</h2>
+      <ul>
+        <li>Deliver, personalize, and improve our AI training courses and tools.</li>
+        <li>Process enrollments, payments, and course completions.</li>
+        <li>Send you transactional emails (receipts, certificates) and, with consent, marketing updates.</li>
+        <li>Analyze platform usage to develop new training programs and AI features.</li>
+        <li>Maintain security, prevent fraud, and enforce our Terms & Conditions.</li>
+        <li>Comply with applicable legal obligations.</li>
+        <li>Train or fine-tune our AI systems using <strong>anonymized and aggregated</strong> interaction data only — never individually identifiable data without explicit consent.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 04</div>
+      <h2>Cookies & Tracking Technologies</h2>
+      <p>We use first-party and third-party cookies for authentication, analytics (e.g., Google Analytics), and personalization. You can manage cookie preferences through your browser settings or our cookie consent banner. Disabling cookies may limit certain platform features.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 05</div>
+      <h2>How We Share Your Information</h2>
+      <p>We do <strong>not sell</strong> your personal information. We may share it with:</p>
+      <ul>
+        <li><strong>Service Providers</strong> — payment processors, cloud hosting, email delivery, analytics, and LMS platforms operating under data processing agreements.</li>
+        <li><strong>Business Transfers</strong> — in connection with a merger, acquisition, or asset sale, with notice provided.</li>
+        <li><strong>Legal Compliance</strong> — when required by law, court order, or to protect rights and safety.</li>
+        <li><strong>With Your Consent</strong> — for any other purpose disclosed to you at the time of collection.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 06</div>
+      <h2>Data Retention</h2>
+      <p>We retain personal data for as long as your account is active or as needed to provide services, comply with legal obligations, resolve disputes, and enforce agreements. You may request deletion of your account and associated data at any time (see § 08).</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 07</div>
+      <h2>Data Security</h2>
+      <p>We implement industry-standard security measures including encryption in transit (TLS), access controls, and regular security reviews. No system is 100% secure. We will notify affected users of any data breach as required by applicable law.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 08</div>
+      <h2>Your Rights & Choices</h2>
+      <p>Depending on your jurisdiction you may have the right to:</p>
+      <ul>
+        <li>Access, correct, or delete your personal data.</li>
+        <li>Opt out of marketing communications at any time via the unsubscribe link.</li>
+        <li>Request data portability or restrict processing.</li>
+        <li>Lodge a complaint with your local data protection authority (for EU/UK residents under GDPR/UK GDPR).</li>
+        <li>California residents may exercise rights under the CCPA/CPRA by contacting us.</li>
+      </ul>
+      <p style="margin-top:12px;">Submit requests to <a class="inline" href="mailto:agenticmindshelp@gmail.com">agenticmindshelp@gmail.com</a>. We respond within 30 days.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 09</div>
+      <h2>Children's Privacy & COPPA Compliance</h2>
+      <p>AgenticMinds is committed to protecting the privacy and safety of children online. This section describes how we comply with the <strong>Children's Online Privacy Protection Act (COPPA)</strong>, 15 U.S.C. § 6501 et seq., and the FTC's implementing regulations (16 C.F.R. Part 312).</p>
+
+      <p style="margin-top:14px;"><strong>Not Directed to Children Under 13.</strong> Our Services are not directed to, designed for, or intended for children under the age of 13. We do not knowingly market to or solicit personal information from children under 13. Our registration flow includes an age verification step — users who indicate they are under 13 are blocked from creating an account and no data is retained.</p>
+
+      <p style="margin-top:14px;"><strong>No Knowing Collection of Children's Data.</strong> We do not knowingly collect, use, or disclose personal information from children under 13 without prior verifiable parental consent as required by COPPA. "Personal information" under COPPA includes: name, home address, email address, phone number, Social Security number, persistent identifiers such as cookies and IP addresses, photos or audio files containing a child's image or voice, geolocation data sufficient to identify a street address, and any information that could be used to identify or contact a specific child.</p>
+
+      <p style="margin-top:14px;"><strong>Parental Notification & Verifiable Consent.</strong> If we ever offer Services or features accessible to children under 13, we will — before collecting any personal information — provide direct notice to parents or guardians describing what we collect and how it is used, obtain verifiable parental consent via an FTC-approved method (e.g., signed consent form, credit card verification, or government ID verification), and give parents the option to consent to internal use without authorizing third-party disclosure. We will not condition a child's participation on disclosing more information than is reasonably necessary.</p>
+
+      <p style="margin-top:14px;"><strong>Parental Rights.</strong> Parents or legal guardians may at any time: review personal information collected from their child; request deletion of that information; refuse further collection or use; and revoke previously granted consent. To exercise these rights, email <a class="inline" href="mailto:agenticmindshelp@gmail.com">agenticmindshelp@gmail.com</a> with the subject line <strong>"COPPA Parental Request."</strong> We will verify your identity and respond within 10 business days.</p>
+
+      <p style="margin-top:14px;"><strong>Third-Party Operators.</strong> We contractually require all third-party service providers integrated into our platform to comply with COPPA and prohibit them from collecting personal information from children under 13 through our Services without parental consent.</p>
+
+      <p style="margin-top:14px;"><strong>Cookies & Tracking — Children.</strong> We do not use persistent identifiers to track children under 13 for behavioral advertising. If we determine a visitor is under 13, we will immediately cease data collection, delete any associated persistent identifiers, and restrict access to account-creation features.</p>
+
+      <p style="margin-top:14px;"><strong>AI Features & Children.</strong> Given the open-ended nature of AI interactions, we apply heightened safeguards to ensure our AI-powered tools are inaccessible to children under 13 without verified parental consent. We do not use data submitted by a child under 13 to train or improve our AI models without explicit parental authorization.</p>
+
+      <p style="margin-top:14px;"><strong>Inadvertent Collection.</strong> If we discover we have inadvertently collected personal information from a child under 13, we will promptly delete it, notify the parent or guardian where possible, and refrain from using it for any secondary purpose.</p>
+
+      <p style="margin-top:14px;"><strong>Reporting a COPPA Concern.</strong> If you believe a child under 13 has submitted personal information to AgenticMinds without parental consent, contact us immediately at <a class="inline" href="mailto:agenticmindshelp@gmail.com">agenticmindshelp@gmail.com</a> with the subject line "COPPA — Child Data Concern." You may also file a complaint directly with the FTC at <a class="inline" href="https://www.ftc.gov" target="_blank">ftc.gov</a> or 1-877-FTC-HELP.</p>
+
+      <div class="callout"><strong>FTC COPPA Resource:</strong> For more information about children's online privacy rights, visit <a class="inline" href="https://www.ftc.gov/business-guidance/privacy-security/childrens-privacy" target="_blank">ftc.gov/coppa</a>.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 10</div>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy periodically. We will post the revised version with an updated date and, for material changes, notify you by email or prominent notice on our platform. Continued use after changes constitutes acceptance.</p>
+      <div class="callout"><strong>Contact:</strong> For privacy concerns reach us at <a class="inline" href="mailto:agenticmindshelp@gmail.com">agenticmindshelp@gmail.com</a> or via our website contact form.</div>
+    </div>
+
+  </div>
+  <!-- END PRIVACY -->
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--            TERMS & CONDITIONS              -->
+  <!-- ══════════════════════════════════════════ -->
+  <div id="terms" class="panel">
+
+    <div class="section">
+      <div class="section-num">§ 01</div>
+      <h2>Acceptance of Terms</h2>
+      <p>These Terms & Conditions ("Terms") govern your access to and use of the AgenticMinds platform, website, courses, and AI-powered tools (collectively, the "Services"). By accessing or using the Services you agree to be bound by these Terms and our Privacy Policy. If you do not agree, do not use the Services.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 02</div>
+      <h2>Eligibility</h2>
+      <p>You must be at least 18 years old (or the age of majority in your jurisdiction) to create an account or purchase a course. By using the Services, you represent and warrant that you meet this requirement.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 03</div>
+      <h2>Account Registration</h2>
+      <p>You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account. You agree to:</p>
+      <ul>
+        <li>Provide accurate and up-to-date registration information.</li>
+        <li>Notify us immediately at <a class="inline" href="mailto:support@agenticminds.net">support@agenticminds.net</a> of any unauthorized access.</li>
+        <li>Not share your account credentials with any third party.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 04</div>
+      <h2>Course Enrollment & Payments</h2>
+      <p>Access to paid courses requires purchase at the listed price. All fees are stated in USD unless otherwise specified. Payment is processed through our secure third-party provider. Prices are subject to change with reasonable notice. We reserve the right to refuse or cancel orders at our discretion.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 05</div>
+      <h2>Refund Policy</h2>
+      <p>We offer a <strong>14-day money-back guarantee</strong> for first-time purchases of any course, provided you have completed fewer than 30% of the course content. To request a refund, contact <a class="inline" href="mailto:support@agenticminds.net">support@agenticminds.net</a>. Refunds are processed within 7–10 business days. Promotional or bundle purchases may have separate refund terms disclosed at purchase.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 06</div>
+      <h2>Intellectual Property</h2>
+      <p>All content on the AgenticMinds platform — including course materials, videos, AI tools, software, branding, and text — is owned by or licensed to AgenticMinds and is protected by copyright, trademark, and other intellectual property laws.</p>
+      <ul>
+        <li>You are granted a <strong>limited, personal, non-transferable, non-exclusive</strong> license to access and use course content for your own learning.</li>
+        <li>You may not reproduce, distribute, publicly display, sublicense, sell, or create derivative works from our content without prior written permission.</li>
+        <li>Recording of live sessions, screen-capture of course content, or redistribution in any form is strictly prohibited.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 07</div>
+      <h2>User-Generated Content & AI Interactions</h2>
+      <p>You retain ownership of content you submit (e.g., project work, forum posts). By submitting content you grant AgenticMinds a worldwide, royalty-free license to use, store, display, and analyze it for the purpose of operating and improving the Services. You represent that your content does not infringe any third-party rights.</p>
+      <p style="margin-top:10px;">AI-generated outputs produced through our tools are provided as educational aids. You are solely responsible for verifying accuracy and for any decisions made based on AI-generated content.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 08</div>
+      <h2>Prohibited Conduct</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Services for any unlawful purpose or to violate any regulation.</li>
+        <li>Attempt to gain unauthorized access to any part of the platform or its infrastructure.</li>
+        <li>Reverse-engineer, scrape, or extract our AI models, training data, or proprietary algorithms.</li>
+        <li>Share course access credentials or circumvent enrollment controls.</li>
+        <li>Upload viruses, malware, or any harmful code.</li>
+        <li>Harass, threaten, or harm other users or AgenticMinds personnel.</li>
+        <li>Use our AI tools to generate misleading, harmful, or illegal content.</li>
+        <li>Impersonate AgenticMinds or any of its instructors or employees.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 09</div>
+      <h2>Disclaimers</h2>
+      <p>The Services are provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranties of any kind, express or implied. We do not warrant that the platform will be error-free, uninterrupted, or that AI-generated content will be accurate, complete, or fit for any particular purpose. Educational content is for informational purposes only and does not constitute professional advice.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 10</div>
+      <h2>Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, AgenticMinds, its officers, directors, employees, and partners shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Services. Our total aggregate liability shall not exceed the amounts paid by you to us in the twelve (12) months preceding the claim.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 11</div>
+      <h2>Indemnification</h2>
+      <p>You agree to defend, indemnify, and hold harmless AgenticMinds from any claims, damages, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of your use of the Services, your User Content, or your violation of these Terms.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 12</div>
+      <h2>Termination</h2>
+      <p>We may suspend or terminate your account at any time for violation of these Terms, with or without notice. You may close your account at any time by contacting support. Upon termination, your license to access course content ceases. Provisions that by their nature should survive termination will remain in effect.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 13</div>
+      <h2>Governing Law & Dispute Resolution</h2>
+      <p>These Terms are governed by the laws of the State of <strong>Delaware, United States</strong>, without regard to conflict-of-law principles. Any disputes shall first be attempted to be resolved through good-faith negotiation. If unresolved within 30 days, disputes shall be settled by binding arbitration under the rules of the American Arbitration Association, except that either party may seek injunctive relief in a court of competent jurisdiction for intellectual property matters.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">§ 14</div>
+      <h2>Changes to Terms</h2>
+      <p>We reserve the right to update these Terms at any time. We will provide notice of material changes via email or on-platform notification at least 14 days before they take effect. Continued use of the Services after the effective date constitutes acceptance of the revised Terms.</p>
+      <div class="callout"><strong>Questions?</strong> Contact us at <a class="inline" href="mailto:legal@agenticminds.net">legal@agenticminds.net</a></div>
+    </div>
+
+  </div>
+  <!-- END TERMS -->
+
+  <footer>
+    <p>&copy; 2025 AgenticMinds. All rights reserved. &nbsp;|&nbsp; <a href="https://agenticminds.net">agenticminds.net</a></p>
+    <p style="margin-top:8px;">These documents were last updated February 22, 2025.</p>
+  </footer>
+
+</div>
+
+<script>
+  function switchTab(id, btn) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
