@@ -6,15 +6,27 @@ const Contact = () => {
       {/* Hero */}
       <section className="gradient-primary text-primary-foreground section-padding">
         <div className="container-narrow text-center">
-          <h1 className="text-4xl font-bold md:text-5xl">Get in Touch</h1>
-          <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">
-            Have questions about our programs? Want to discuss custom solutions? We're here to help.
-          </p>
+          <h1 className="text-4xl font-bold md:text-5xl">Enroll Now</h1>
+          {/* <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">
+            Spring Break Camp 2026 | April 6th - April 10th | 2:30PM - 4:00PM  
+          </p> */}
           <p className="mt-2 text-sm opacity-75">We respond to all inquiries within 24 hours during business days.</p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
+            <div className="flex-1 rounded-xl bg-blue-950 text-white px-8 py-5 text-center min-w-[200px]">
+              <p className="text-lg font-bold">Spring Break Camp 2026</p>
+              <p className="mt-1 text-sm opacity-80">April 6th – April 10th </p>
+               <p className="mt-1 text-sm opacity-80">2:30PM – 4:00PM</p>
+            </div>
+            <div className="flex-1 rounded-xl bg-blue-950 text-white px-8 py-5 text-center min-w-[200px]">
+              <p className="text-lg font-bold">Corporate AI Training </p>
+              <p className="mt-1 text-sm opacity-80">Coming Summer 2026</p>
+              <p className="mt-1 text-sm opacity-80">Apply for Pilot</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="section-padding bg-surface">
+      <section className="section-padding !pt-10 bg-surface">
         <div className="container-narrow">
           <div className="grid gap-12 lg:grid-cols-3">
 
@@ -22,7 +34,7 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <div className="mb-8">
                 <h2 className="text-2xl font-bold">Send Us a Message</h2>
-                <p className="text-muted-foreground mt-2">Want to Enroll or Have Any Questions about our program? Fill out the form and we'll get back to you as soon as possible.</p>
+                <p className="text-muted-foreground mt-2">Want to Enroll or Have Any Questions about our programs? Fill out the form and we'll get back to you as soon as possible.</p>
               </div>
               <div className="w-full overflow-hidden rounded-2xl border border-border shadow-sm bg-white">
                 <iframe
@@ -84,7 +96,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl bg-surface-alt border border-border p-6">
+              {/* <div className="rounded-xl bg-surface-alt border border-border p-6">
                 <h3 className="font-bold mb-4">Connect With Us</h3>
                 <div className="flex gap-3">
                   {[Linkedin, Twitter, Facebook, Instagram, Youtube].map((Icon, i) => (
@@ -97,7 +109,7 @@ const Contact = () => {
                     </a>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               <div className="rounded-xl bg-primary/5 border border-primary/20 p-6">
                 <h3 className="font-bold mb-2">Partnerships & Media</h3>

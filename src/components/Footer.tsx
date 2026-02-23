@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container-narrow px-4 py-16 ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-14 lg:grid-cols-5">
-        {/*<div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5 text-center justify-items-center">*/}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+        {/*<div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 text-center justify-items-center">*/}
           {/* Quick Links */}
           <div>
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider opacity-80">Quick Links</h4>
@@ -50,7 +50,7 @@ const Footer = () => {
           {/* Connect */}
           <div>
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider opacity-80">Connect</h4>
-            <ul className="space-y-3 text-sm opacity-90">
+            <ul className="space-y-2 text-sm opacity-90">
               <li className="flex items-start gap-2">
                 <Mail size={16} className="mt-0.5 shrink-0" />
                 <a href="mailto:AgenticMindsHelp@gmail.com" className="hover:underline">AgenticMindsHelp@gmail.com</a>

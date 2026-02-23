@@ -60,7 +60,7 @@ const Index = () => {
       </section>
 
       {/* ===== WHY AI NATIVE ===== */}
-      <section className="section-padding bg-surface">
+      <section className="section-padding !pt-14 !pb-14 bg-surface">
         <div className="container-narrow">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold md:text-4xl">What Does <span className="gradient-text">"AI Native"</span> Mean?</h2>
@@ -102,7 +102,7 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="mt-6 mb-0 text-center font-heading text-lg font-semibold text-primary">
+          <div className="mt-12 mb-0 text-center font-heading text-lg font-semibold text-primary">
             <p>Think beyond Chat GPT.</p>
             <p className="mt-1">We teach AI-native thinking: how to leverage AI agents to bring your boldest ideas to life in hours, not months.</p>
           </div>
@@ -110,7 +110,7 @@ const Index = () => {
       </section>
 
       {/* ===== YOUTH PROGRAMS ===== */}
-      <section className="section-padding bg-surface-alt">
+      <section className="section-padding !pt-10 bg-surface-alt">
         <div className="container-narrow">
           <div className="text-center">
             <span className="inline-block rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold text-primary">For 5th–8th Graders</span>
