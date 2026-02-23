@@ -1,88 +1,6 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { toast } from "sonner";
-import {
-  CheckCircle2, AlertCircle, Loader2, Mail, Phone, MapPin,
-  Clock, Linkedin, Twitter, Facebook, Instagram, Youtube, ExternalLink
-} from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Linkedin, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
 
 const Contact = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
-
-    // NOTE TO USER: Replace this URL with your Google Apps Script Web App URL
-    // after following the instructions I will provide.
-    const SCRIPT_URL = "";
-
-    try {
-      if (!SCRIPT_URL) {
-        // Mock successful submission if no URL is provided yet
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsSuccess(true);
-        toast.success("Message sent successfully!");
-        return;
-      }
-
-      const response = await fetch(SCRIPT_URL, {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (response.ok) {
-        setIsSuccess(true);
-        toast.success("Message sent successfully!");
-      } else {
-        throw new Error('Failed to send message');
-      }
-    } catch (error) {
-      console.error(error);
-      toast.error("Fixed backend integration: Please configure the SCRIPT_URL.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  if (isSuccess) {
-    return (
-      <div className="min-h-screen">
-        <section className="gradient-primary text-primary-foreground section-padding">
-          <div className="container-narrow text-center">
-            <h1 className="text-4xl font-bold md:text-5xl">Thank You!</h1>
-            <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">
-              Your message has been received. We'll get back to you within 24 hours.
-            </p>
-          </div>
-        </section>
-        <section className="section-padding bg-surface">
-          <div className="container-narrow text-center">
-            <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600 mb-6">
-              <CheckCircle2 size={40} />
-            </div>
-            <h2 className="text-2xl font-bold mb-4">Message Sent Successfully</h2>
-            <p className="text-muted-foreground mb-8 text-balance">
-              We've received your inquiry and our team is already on it. Check your email for a confirmation shortly.
-            </p>
-            <Button onClick={() => setIsSuccess(false)} variant="outline">
-              Send Another Message
-            </Button>
-          </div>
-        </section>
-      </div>
-    );
-  }
-
   return (
     <div>
       {/* Hero */}
@@ -100,79 +18,23 @@ const Contact = () => {
         <div className="container-narrow">
           <div className="grid gap-12 lg:grid-cols-3">
 
-            {/* Custom Contact Form */}
+            {/* Google Form */}
             <div className="lg:col-span-2">
               <div className="mb-8">
                 <h2 className="text-2xl font-bold">Send Us a Message</h2>
                 <p className="text-muted-foreground mt-2">Fill out the form below and we'll get back to you as soon as possible.</p>
               </div>
-
-              <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-2xl border border-border shadow-sm">
-                <div className="grid gap-6 sm:grid-cols-2">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" name="firstName" placeholder="John" required />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" name="lastName" placeholder="Doe" required />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" name="email" type="email" placeholder="john@example.com" required />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="inquiryType">Inquiry Type</Label>
-                  <Select name="inquiryType" required>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select an option" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="youth">Youth Programs (5th-8th Grade)</SelectItem>
-                      <SelectItem value="corporate">Corporate Training</SelectItem>
-                      <SelectItem value="partnership">Partnerships / Media</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="How can we help you?"
-                    className="min-h-[150px]"
-                    required
-                  />
-                </div>
-
-                <div className="flex items-start space-x-2">
-                  <Checkbox id="newsletter" name="newsletter" />
-                  <div className="grid gap-1.5 leading-none">
-                    <label
-                      htmlFor="newsletter"
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      Keep me updated on new programs and AI news
-                    </label>
-                  </div>
-                </div>
-
-                <Button type="submit" className="w-full sm:w-auto px-8" disabled={isSubmitting}>
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Sending...
-                    </>
-                  ) : (
-                    "Send Message"
-                  )}
-                </Button>
-              </form>
+              <div className="w-full overflow-hidden rounded-2xl border border-border shadow-sm bg-white">
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLScKUry-HjWXP4vg3QqyuufQfzR1Rr3Rdw8KasVwlsX8jK2Wpw/viewform?embedded=true"
+                  width="100%"
+                  height="876"
+                  style={{ border: 0 }}
+                  title="Contact Us Form"
+                >
+                  Loading…
+                </iframe>
+              </div>
             </div>
 
             {/* Sidebar */}

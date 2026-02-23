@@ -49,10 +49,8 @@ const faqs = [
   { q: "What if my child has no coding or technical experience?", a: "Perfect! No prior experience needed. We start from the beginning and build understanding progressively. Our focus is on thinking patterns, not technical coding skills." },
   { q: "How do you ensure online safety?", a: "All sessions are supervised, use secure platforms, and follow strict privacy protocols. We comply with COPPA regulations. We recommend parent supervision for the first session." },
   { q: "How do you teach ethical AI use?", a: "Ethics are integrated throughout, not a single lesson. We discuss academic integrity, privacy, bias recognition, source verification, copyright concerns, and when NOT to use AI." },
-  { q: "Will this help with schoolwork?", a: "Yes, but that's not the only goal. Students learn research skills, writing enhancement, study techniques, and critical thinking that support academic success and extend beyond school." },
-  { q: "What's your refund policy?", a: "Full refund if withdrawn before the 2nd session. Partial refunds available through week 4. Contact us for details." },
-  { q: "How can I track my child's progress?", a: "We provide weekly progress emails, a mid-program parent check-in call, access to student project portfolio, and a final program report card." },
-];
+  { q: "What's your refund policy?", a: "Full refund if withdrawn before April 1st." },
+  { q: "How do I enroll?", a: "Click the 'Contact Us' button to get in touch. We'll answer any questions and guide you through the enrollment process." },];
 
 const YouthPrograms = () => {
   return (
