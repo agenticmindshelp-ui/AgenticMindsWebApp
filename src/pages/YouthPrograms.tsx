@@ -153,7 +153,7 @@ const YouthPrograms = () => {
               <h3 className="text-xl font-bold">Spring Break Camp 2026</h3>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                 <li><strong>Duration:</strong> 1 week online intensive</li>
-                <li><strong>Schedule:</strong> April 6 - April 10 2026 | 2:30 PM - 4:00 PM</li>
+                <li><strong>Schedule:</strong> April 6 - April 10 2026</li>
                 <li><strong>Best for:</strong> AI Imersive spring learning experience</li>
               </ul>
             </div>
