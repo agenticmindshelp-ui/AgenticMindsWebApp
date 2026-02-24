@@ -67,7 +67,7 @@ const Contact = () => {
                     <Phone size={18} className="shrink-0 text-primary mt-0.5" />
                     <div>
                       <p className="font-medium">Phone / WhatsApp</p>
-                      <p className="text-muted-foreground">480-296-1631 | 540-556-3262</p>
+                      <p className="text-muted-foreground">540-556-3262</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

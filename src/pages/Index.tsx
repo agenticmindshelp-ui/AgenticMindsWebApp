@@ -5,7 +5,8 @@ import {
   GraduationCap, Monitor, Users, Brain, ShieldCheck, FolderOpen,
   Building2, Lightbulb, Target, BarChart3, Briefcase, Rocket,
   CheckCircle2, ArrowRight, Zap, BookOpen, Award,
-  Eye
+  Eye,
+  Space
 } from "lucide-react";
 import heroImg from "@/assets/Hero-adultsnstudents2.jpg";
 import corpImg from "@/assets/corporate-team.jpg";
@@ -36,7 +37,16 @@ const Index = () => {
                   <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold px-8 py-6">
                     Enroll Now
                   </Button>
-                </Link>
+                     </Link>
+                   <a
+                href="public/WithContactUs.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center font-semibold text-sm hover:underline transition"
+              >
+              Spring Break Camp 2026 Flyer →
+              </a>
+             
               </motion.div>
               <motion.div variants={fadeUp} custom={3} className="mt-10 flex flex-wrap gap-x-6 gap-y-4">
                 {[
@@ -117,11 +127,26 @@ const Index = () => {
             <h2 className="mt-4 text-3xl font-bold md:text-4xl">Youth Programs: Real Problems, Real Solutions</h2>
           </div>
 
-          {/* Middle School - Primary */}
-          <div className="mt-12 rounded-2xl bg-surface p-8 shadow-lg border border-border">
-            <div className="flex flex-wrap items-center gap-3 mb-6">
-              <span className="rounded-full gradient-primary px-4 py-1 text-sm font-bold text-primary-foreground">SPRING BREAK CAMP 2026</span>
-              <span className="text-sm font-bold text-muted-foreground">For 5th - 8th Graders | Apr 6th - Apr 10th, 2026 | 2:30PM - 4:00PM </span>
+          {/* Middle School - Primaary */}
+          <div className="flex flex-col gap-3 mb-6 mt-12">
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="/public/WithContactUs.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full gradient-primary px-4 py-1 text-sm font-bold text-primary-foreground inline-block"
+              >
+                SPRING BREAK CAMP 2026
+              </a>
+              <span className="text-sm font-bold text-muted-foreground">For 5th - 8th Graders | Apr 6th - Apr 10th, 2026 </span>
+              <a
+                href="/spring-break-flyer.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center font-semibold text-sm hover:underline transition"
+              >
+              Spring Break Camp 2026 Flyer →
+              </a>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2">
@@ -171,7 +196,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ===== CORPORATE TRAINING (EQUAL WEIGHT) ===== */}
+      {false && (
       <section className="section-padding bg-surface">
         <div className="container-narrow">
           <div className="text-center">
@@ -259,6 +284,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      )}
     </div>
   );
 };

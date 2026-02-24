@@ -14,7 +14,7 @@ const Footer = () => {
               {[
                 { label: "Home", to: "/" },
                 { label: "Youth Programs", to: "/youth-programs" },
-                { label: "Corporate Training", to: "/corporate-training" },
+                // { label: "Corporate Training", to: "/corporate-training" },
                 { label: "About Us", to: "/about" },
                 { label: "Contact", to: "/contact" },
               ].map((l) => (
@@ -57,7 +57,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2">
                 <Phone size={16} className="mt-0.5 shrink-0" />
-                <span>480-296-1631 | 540-556-3262</span>
+                <span>540-556-3262</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="mt-0.5 shrink-0" />

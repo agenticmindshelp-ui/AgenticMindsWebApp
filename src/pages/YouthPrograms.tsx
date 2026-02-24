@@ -289,17 +289,17 @@ const YouthPrograms = () => {
       <section className="section-padding bg-surface-alt">
         <div className="container-narrow">
           <h2 className="text-3xl font-bold md:text-4xl text-center">Learn from AI Industry Builders</h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+          <div className="mt-12 grid gap-8 md:grid-cols-1 max-w-4xl mx-auto">
             {[
-              {
-                name: "Kanthi Santhikumar",
-                role: "Co-Founder",
-                bg: "https://www.linkedin.com/in/kanthi-santhikumar/",
-                philosophy: "The best learning happens when students solve problems they care about.",
-              },
+              // {
+              //   name: "Kanthi Santhikumar",
+              //   role: "Co-Founder",
+              //   bg: "https://www.linkedin.com/in/kanthi-santhikumar/",
+              //   philosophy: "The best learning happens when students solve problems they care about.",
+              // },
               {
                 name: "Gunjan Singh",
-                role: "Co-Founder",
+                role: "Instructor",
                 bg: "https://www.linkedin.com/in/gunjan1983",
                 philosophy: "We need to teach the next generation to be creators with AI, not just consumers.",
               },
