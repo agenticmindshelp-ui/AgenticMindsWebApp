@@ -34,7 +34,7 @@ const About = () => {
             <p>The AI revolution isn't coming—it's here. But as we watched from inside the tech industry, we saw a massive gap between those who could think AI native and those who were just using tools superficially.</p>
             <p>In our work at leading tech companies, we built systems where AI wasn't an add-on feature but fundamentally integrated into how we solved problems. We learned what actually mattered: not knowing every tool, but understanding how to think and work in an AI-powered environment.</p>
             <p>We saw the AI gap everywhere. Our own children were coming home from school without any real AI education. Meanwhile, our colleagues at companies large and small were struggling with the same question: how do we actually become AI native?</p>
-            <p>That's why we founded AgenticMinds. We're starting with young people—teaching 5th through 8th graders to think AI native from the beginning, rather than having to unlearn old habits later. And we're planning to bring that same hands-on, problem-based approach to businesses that need practical guidance from people who've actually built with AI.</p>
+            <p>That's why we founded AgenticMinds. We're starting with young people—teaching 5th through 8th graders to think AI native from the beginning, rather than having to unlearn old habits later.</p>
             <p className="font-semibold text-foreground">Our goal isn't to just teach people to use today's tools. It's to teach them to think in ways that will serve them as AI continues to evolve—to become truly AI native.</p>
           </div>
         </div>

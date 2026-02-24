@@ -39,7 +39,7 @@ const Index = () => {
                   </Button>
                      </Link>
                    <a
-                href="public/WithContactUs.png"
+                href="/WithContactUs.png"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center font-semibold text-sm hover:underline transition"
