@@ -17,11 +17,6 @@ const Contact = () => {
               <p className="mt-1 text-sm opacity-80">April 6th – April 10th </p>
                <p className="mt-1 text-sm opacity-80">2:30PM – 4:00PM</p>
             </div>
-            <div className="flex-1 rounded-xl bg-blue-950 text-white px-8 py-5 text-center min-w-[200px]">
-              <p className="text-lg font-bold">Corporate AI Training </p>
-              <p className="mt-1 text-sm opacity-80">Coming Summer 2026</p>
-              <p className="mt-1 text-sm opacity-80">Apply for Pilot</p>
-            </div>
           </div>
         </div>
       </section>
@@ -92,7 +87,7 @@ const Contact = () => {
                 <h3 className="font-bold mb-4">Service Area</h3>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <p><strong>Youth Programs:</strong> Bay Area (online)</p>
-                  <p><strong>Corporate:</strong> Nationwide (online and in-person)</p>
+                  {/* <p><strong>Corporate:</strong> Nationwide (online and in-person)</p> */}
                 </div>
               </div>
 

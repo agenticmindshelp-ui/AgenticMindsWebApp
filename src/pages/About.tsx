@@ -145,9 +145,9 @@ const About = () => {
             <Link to="/youth-programs">
               <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold px-8 py-6 hover:opacity-90">Explore Youth Programs</Button>
             </Link>
-            <Link to="/corporate-training">
+            {/* <Link to="/corporate-training">
               <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold px-8 py-6">Corporate Training</Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
