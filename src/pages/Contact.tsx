@@ -13,9 +13,12 @@ const Contact = () => {
           <p className="mt-2 text-sm opacity-75">We respond to all inquiries within 24 hours during business days.</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
             <div className="flex-1 rounded-xl bg-blue-950 text-white px-8 py-5 text-center min-w-[200px]">
-              <p className="text-lg font-bold">Spring Break Camp 2026</p>
-              <p className="mt-1 text-sm opacity-80">April 6th – April 10th </p>
-               <p className="mt-1 text-sm opacity-80">2:30PM – 4:00PM</p>
+              <p className="text-lg font-bold">AI Training for Professionals</p>
+              <p className="mt-1 text-sm opacity-80">May 30th – 31st</p>
+            </div>
+            <div className="flex-1 rounded-xl bg-blue-950 text-white px-8 py-5 text-center min-w-[200px]">
+              <p className="text-lg font-bold">AI Training for Youth</p>
+              <p className="mt-1 text-sm opacity-80">May Cohort</p>
             </div>
           </div>
         </div>
@@ -33,7 +36,7 @@ const Contact = () => {
               </div>
               <div className="w-full overflow-hidden rounded-2xl border border-border shadow-sm bg-white">
                 <iframe
-                  src="https://docs.google.com/forms/d/e/1FAIpQLScKUry-HjWXP4vg3QqyuufQfzR1Rr3Rdw8KasVwlsX8jK2Wpw/viewform?embedded=true"
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSd6R3Ch7n3Cu2iklIt5PqhxIYLjjXpU1WCTW8TuZe8eKNeVAw/viewform?usp=header"
                   width="100%"
                   height="876"
                   style={{ border: 0 }}

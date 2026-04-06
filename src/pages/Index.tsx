@@ -29,7 +29,7 @@ const Index = () => {
                 Become AI Native.<br />Own Your Future.
               </motion.h1>
               <motion.p variants={fadeUp} custom={1} className="mt-6 text-lg opacity-90 max-w-xl">
-                Get hands-on learning from AI industry experts who build with AI every day.
+                Real skills. Real projects. Real AI experts teaching the next generation of AI-native thinkers.
               </motion.p>
               <motion.div variants={fadeUp} custom={2} className="mt-8 flex flex-wrap gap-4">
 
@@ -37,21 +37,11 @@ const Index = () => {
                   <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold px-8 py-6">
                     Enroll Now
                   </Button>
-                     </Link>
-                   <a
-                href="/WithContactUs.png"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center font-semibold text-sm hover:underline transition"
-              >
-              Spring Break Camp 2026 Flyer →
-              </a>
-             
+                </Link>
               </motion.div>
               <motion.div variants={fadeUp} custom={3} className="mt-10 flex flex-wrap gap-x-6 gap-y-4">
                 {[
-                  { icon: Award, text: "AI Industry Expert Instructors" },
-                  { icon: Monitor, text: "Live Online Learning" },
+{ icon: Monitor, text: "Live Online Learning" },
                   { icon: Eye, text: "Ethical AI Foundations" },
                    { icon: Target, text: "Results-Focused Learning" },
                 ].map(({ icon: Icon, text }) => (
@@ -196,25 +186,7 @@ const Index = () => {
 
           {/* Middle School - Primaary */}
           <div className="flex flex-col gap-3 mb-6 mt-12">
-            <div className="flex flex-wrap items-center gap-3">
-              <a
-                href="/public/WithContactUs.png"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full gradient-primary px-4 py-1 text-sm font-bold text-primary-foreground inline-block"
-              >
-                SPRING BREAK CAMP 2026
-              </a>
-              <span className="text-sm font-bold text-muted-foreground">For 5th - 8th Graders | Apr 6th - Apr 10th, 2026 </span>
-              <a
-                href="/spring-break-flyer.png"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center font-semibold text-sm hover:underline transition"
-              >
-              Spring Break Camp 2026 Flyer →
-              </a>
-            </div>
+            <div>
 
             <div className="grid gap-8 md:grid-cols-2">
               {[
@@ -252,7 +224,7 @@ const Index = () => {
             <div className="mt-8 flex flex-wrap items-center gap-4">
 
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Enroll For Spring Break Camp</Button>
+                <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Sign Up for May Cohort</Button>
               </Link>
               <Link to="/youth-programs" className="text-sm font-semibold text-primary hover:underline flex items-center gap-1">
                 View Full Curriculum <ArrowRight size={14} />
@@ -261,6 +233,7 @@ const Index = () => {
           </div>
 
         </div>
+      </div>
       </section>
 
       {false && (

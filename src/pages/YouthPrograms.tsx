@@ -82,7 +82,7 @@ const YouthPrograms = () => {
               <div className="mt-8 flex flex-wrap gap-4">
 
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold px-8 py-6">Enroll for Spring Break Camp 2026</Button>
+                  <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold px-8 py-6">Sign Up for May Cohort</Button>
                 </Link>
               </div>
             </div>
