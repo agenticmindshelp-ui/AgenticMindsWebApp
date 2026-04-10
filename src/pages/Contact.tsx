@@ -13,7 +13,7 @@ const Contact = () => {
           <p className="mt-2 text-sm opacity-75">We respond to all inquiries within 24 hours during business days.</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
             <div className="flex-1 rounded-xl bg-blue-950 text-white px-8 py-5 text-center min-w-[200px]">
-              <p className="text-lg font-bold">AI Workshops for Professionals</p>
+              <p className="text-lg font-bold">AI Workshop for Professionals</p>
               <p className="mt-1 text-sm opacity-80">May 30 – 31st, 2026</p>
             </div>
             <div className="flex-1 rounded-xl bg-blue-950 text-white px-8 py-5 text-center min-w-[200px]">

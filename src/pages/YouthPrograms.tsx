@@ -210,6 +210,11 @@ const YouthPrograms = () => {
               </div>
             ))}
           </div>
+          <div className="mt-10 text-center">
+            <Link to="/contact">
+              <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold px-10 py-6 hover:opacity-90">Sign Up for May Cohort</Button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -315,7 +320,7 @@ const YouthPrograms = () => {
       <section className="section-padding gradient-primary text-primary-foreground text-center">
         <div className="container-narrow">
           <h2 className="text-3xl font-bold md:text-4xl">Ready to Start?</h2>
-          <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">Join our Spring cohort and give your child the AI native skills they need to thrive.</p>
+          <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">Join our May cohort and give your child the AI native skills they need to thrive.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
 
             <Link to="/contact">
