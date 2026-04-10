@@ -114,7 +114,7 @@ const Index = () => {
         <div className="container-narrow">
           <div className="text-center">
             <span className="inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-semibold text-accent">For Professionals</span>
-            <h2 className="mt-4 text-3xl font-bold md:text-4xl">AI Training for Professionals: Real Skills, Real Impact</h2>
+            <h2 className="mt-4 text-3xl font-bold md:text-4xl">AI Workshops for Professionals: Real Skills, Real Impact</h2>
           </div>
 
           <div className="flex flex-col gap-3 mb-6 mt-12">
@@ -127,7 +127,7 @@ const Index = () => {
                 to="/professional-training"
                 className="inline-flex items-center font-semibold text-sm hover:underline transition"
               >
-                Professional Training Info →
+                Professional Workshops Info →
               </Link>
             </div>
 
@@ -169,7 +169,7 @@ const Index = () => {
                 <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Sign Up Now</Button>
               </Link>
               <Link to="/professional-training" className="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
-                Learn More About Professional Training <ArrowRight size={14} />
+                Learn More About Professional Workshops <ArrowRight size={14} />
               </Link>
             </div>
           </div>
@@ -241,7 +241,7 @@ const Index = () => {
         <div className="container-narrow">
           <div className="text-center">
             <span className="inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-semibold text-accent">Coming Summer 2026</span>
-            <h2 className="mt-4 text-3xl font-bold md:text-4xl">Professional Training: Transform Your Team Into AI Native Leaders</h2>
+            <h2 className="mt-4 text-3xl font-bold md:text-4xl">Professional Workshops: Transform Your Team Into AI Native Leaders</h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground text-lg">
               We're launching customized professional training for small and medium sized businesses ready to transform how their teams work.
             </p>
@@ -311,7 +311,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/professional-training">
-                <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Learn More About Professional Training</Button>
+                <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Learn More About Professional Workshops</Button>
               </Link>
               {/* <Link to="/professional-training#pilot" className="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                 Apply for Pilot <ArrowRight size={14} />

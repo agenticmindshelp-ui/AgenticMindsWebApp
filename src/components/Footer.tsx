@@ -14,7 +14,7 @@ const Footer = () => {
               {[
                 { label: "Home", to: "/" },
                 { label: "Youth Programs", to: "/youth-programs" },
-                // { label: "Professional Training", to: "/professional-training" },
+                // { label: "Professional Workshops", to: "/professional-training" },
                 { label: "About Us", to: "/about" },
                 { label: "Contact", to: "/contact" },
               ].map((l) => (
@@ -32,7 +32,7 @@ const Footer = () => {
               <li><Link to="/youth-programs" className="hover:underline">Youth Overview</Link></li>
               <li><Link to="/youth-programs" className="hover:underline">Middle School</Link></li>
 
-              <li><Link to="/professional-training" className="hover:underline">Professional Training</Link></li>
+              <li><Link to="/professional-training" className="hover:underline">Professional Workshops</Link></li>
               <li><Link to="/professional-training#pilot" className="hover:underline">Pilot Program</Link></li>
             </ul>
           </div>

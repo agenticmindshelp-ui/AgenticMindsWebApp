@@ -107,7 +107,7 @@ const ProfessionalTraining = () => {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="text-primary-foreground">
               <span className="inline-block rounded-full bg-accent/20 px-4 py-1 text-sm font-bold text-accent-foreground mb-4">Live Workshop May 30–31, 2026 · Limited Seats — Register Now</span>
-              <h1 className="text-4xl font-bold md:text-5xl text-balance">Professional Training: Transform Your Team Into AI Native Leaders</h1>
+              <h1 className="text-4xl font-bold md:text-5xl text-balance">Professional Workshops: Transform Your Team Into AI Native Leaders</h1>
 
               <p className="mt-3 text-sm md:text-base opacity-75">Build AI agents, automate workflows, and drive real business results</p>
               <div className="mt-8 flex flex-wrap gap-4">

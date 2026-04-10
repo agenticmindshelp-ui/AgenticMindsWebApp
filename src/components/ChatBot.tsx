@@ -36,7 +36,7 @@ const FAQ: { keywords: string[]; answer: string; links?: { label: string; to: st
     {
         keywords: ["corporate", "business", "team", "company", "employee", "training", "workplace"],
         answer: "We offer customized professional AI training for teams of all sizes. We're launching Summer 2026 with pilot opportunities available! Please reach out to us on the Contact Us page to sign up or learn more",
-        links: [{ label: "Professional Training", to: "/professional-training" }],
+        links: [{ label: "Professional Workshops", to: "/professional-training" }],
     },
 
     {
