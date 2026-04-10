@@ -144,7 +144,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h4 className="font-bold">{title}</h4>
-                    <p className="text-sm text-muted-foreground">{desc}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -152,7 +152,7 @@ const Index = () => {
 
             <div className="mt-8 rounded-xl bg-surface-alt p-6">
               <h4 className="font-bold mb-3">By the end of this workshop, you will:</h4>
-              <ul className="grid gap-2 sm:grid-cols-2 text-sm">
+              <ul className="grid gap-2 sm:grid-cols-2 text-sm text-muted-foreground">
                 {[
                   "Generate PRDs, marketing briefs, and sales sequences in 30 minutes instead of 6–8 hours",
                   "Turn messy data exports into clean pipeline reports with trends and at-risk deals flagged",
