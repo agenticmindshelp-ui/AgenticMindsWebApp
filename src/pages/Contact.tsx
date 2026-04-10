@@ -56,8 +56,8 @@ const Contact = () => {
                     <Mail size={18} className="shrink-0 text-primary mt-0.5" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <a href="mailto:AgenticMindsHelp@gmail.com" className="text-primary hover:underline">
-                        AgenticMindsHelp@gmail.com
+                      <a href="mailto:Info@AgenticMinds.net" className="text-primary hover:underline">
+                        Info@AgenticMinds.net
                       </a>
                     </div>
                   </div>
@@ -112,7 +112,7 @@ const Contact = () => {
               <div className="rounded-xl bg-primary/5 border border-primary/20 p-6">
                 <h3 className="font-bold mb-2">Partnerships & Media</h3>
                 <p className="text-sm text-muted-foreground mb-3">
-                  Interested in collaborating? We're open to partnerships with schools, educational organizations, tech companies, and community groups.
+                  Interested in collaborating? We're open to partnerships with schools, educational organizations, companies, and community groups.
                 </p>
                 <p className="text-sm text-muted-foreground">Press inquiries and interview requests welcome.</p>
               </div>
