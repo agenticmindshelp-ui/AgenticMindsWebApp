@@ -7,8 +7,8 @@ import logoImg from "@/assets/logo.svg";
 
 const navLinks = [
   { label: "Home", to: "/" },
+  { label: "Professional Training", to: "/professional-training" },
   { label: "Youth Programs", to: "/youth-programs" },
-  // { label: "Corporate Training", to: "/corporate-training" },
   { label: "About Us", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];

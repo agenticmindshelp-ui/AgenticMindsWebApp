@@ -57,7 +57,7 @@ const About = () => {
                 role: "Co-Founder",
                 bg: "Former AI/ML engineer with extensive experience building and deploying AI systems at leading technology companies.",
                 quote: "The best way to prepare for an AI-powered future is to start thinking AI native today—not tomorrow.",
-                expertise: ["AI/ML systems architecture", "Corporate training", "Technical mentorship"],
+                expertise: ["AI/ML systems architecture", "Professional training", "Technical mentorship"],
               },
             ].map((f) => (
               <div key={f.role} className="rounded-2xl bg-surface border border-border p-8">
@@ -145,7 +145,7 @@ const About = () => {
             <Link to="/youth-programs">
               <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold px-8 py-6 hover:opacity-90">Explore Youth Programs</Button>
             </Link>
-            {/* <Link to="/corporate-training">
+            {/* <Link to="/professional-training">
               <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold px-8 py-6">Corporate Training</Button>
             </Link> */}
           </div>

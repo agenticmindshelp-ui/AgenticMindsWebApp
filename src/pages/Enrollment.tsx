@@ -328,7 +328,7 @@ const Enrollment = () => {
                 </Link>
               </div>
 
-              <p className="text-sm text-muted-foreground">Need help? <a href="mailto:AgenticMindsHelp@gmail.com" className="text-primary hover:underline">AgenticMindsHelp@gmail.com</a></p>
+              <p className="text-sm text-muted-foreground">Need help? <a href="mailto:Info@AgenticMinds.net" className="text-primary hover:underline">Info@AgenticMinds.net</a></p>
             </div>
           )}
         </div>

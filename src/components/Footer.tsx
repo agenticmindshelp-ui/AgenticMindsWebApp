@@ -14,7 +14,7 @@ const Footer = () => {
               {[
                 { label: "Home", to: "/" },
                 { label: "Youth Programs", to: "/youth-programs" },
-                // { label: "Corporate Training", to: "/corporate-training" },
+                // { label: "Professional Training", to: "/professional-training" },
                 { label: "About Us", to: "/about" },
                 { label: "Contact", to: "/contact" },
               ].map((l) => (
@@ -32,8 +32,8 @@ const Footer = () => {
               <li><Link to="/youth-programs" className="hover:underline">Youth Overview</Link></li>
               <li><Link to="/youth-programs" className="hover:underline">Middle School</Link></li>
 
-              <li><Link to="/corporate-training" className="hover:underline">Corporate Training</Link></li>
-              <li><Link to="/corporate-training#pilot" className="hover:underline">Pilot Program</Link></li>
+              <li><Link to="/professional-training" className="hover:underline">Professional Training</Link></li>
+              <li><Link to="/professional-training#pilot" className="hover:underline">Pilot Program</Link></li>
             </ul>
           </div>
 
@@ -53,7 +53,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm opacity-90">
               <li className="flex items-start gap-2">
                 <Mail size={16} className="mt-0.5 shrink-0" />
-                <a href="mailto:AgenticMindsHelp@gmail.com" className="hover:underline">AgenticMindsHelp@gmail.com</a>
+                <a href="mailto:Info@AgenticMinds.net" className="hover:underline">Info@AgenticMinds.net</a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone size={16} className="mt-0.5 shrink-0" />

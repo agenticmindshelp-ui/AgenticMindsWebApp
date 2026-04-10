@@ -114,7 +114,7 @@ const Index = () => {
         <div className="container-narrow">
           <div className="text-center">
             <span className="inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-semibold text-accent">For Professionals</span>
-            <h2 className="mt-4 text-3xl font-bold md:text-4xl">Professional Training: Real Skills, Real Impact</h2>
+            <h2 className="mt-4 text-3xl font-bold md:text-4xl">AI Training for Professionals: Real Skills, Real Impact</h2>
           </div>
 
           <div className="flex flex-col gap-3 mb-6 mt-12">
@@ -122,7 +122,7 @@ const Index = () => {
               <span className="rounded-full gradient-primary px-4 py-1 text-sm font-bold text-primary-foreground inline-block">
                 AI TRAINING WORKSHOP MAY 30TH – 31ST, 2026
               </span>
-              <span className="text-sm font-bold text-muted-foreground">For Business Leaders &amp; Teams</span>
+
               <Link
                 to="/professional-training"
                 className="inline-flex items-center font-semibold text-sm hover:underline transition"
@@ -241,9 +241,9 @@ const Index = () => {
         <div className="container-narrow">
           <div className="text-center">
             <span className="inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-semibold text-accent">Coming Summer 2026</span>
-            <h2 className="mt-4 text-3xl font-bold md:text-4xl">Corporate Training: Transform Your Team Into AI Native Leaders</h2>
+            <h2 className="mt-4 text-3xl font-bold md:text-4xl">Professional Training: Transform Your Team Into AI Native Leaders</h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground text-lg">
-              We're launching customized corporate training for small and medium sized businesses ready to transform how their teams work.
+              We're launching customized professional training for small and medium sized businesses ready to transform how their teams work.
             </p>
           </div>
 
@@ -305,15 +305,15 @@ const Index = () => {
 
             {/* CTAs - SAME SIZE as Youth CTAs */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link to="/corporate-training">
+              <Link to="/professional-training">
                 <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold px-8 py-6 hover:opacity-90">
-                  Join Corporate Waitlist
+                  Join Professional Waitlist
                 </Button>
               </Link>
-              <Link to="/corporate-training">
-                <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Learn More About Corporate Training</Button>
+              <Link to="/professional-training">
+                <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Learn More About Professional Training</Button>
               </Link>
-              {/* <Link to="/corporate-training#pilot" className="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+              {/* <Link to="/professional-training#pilot" className="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                 Apply for Pilot <ArrowRight size={14} />
               </Link> */}
             </div>

@@ -31,12 +31,12 @@ const FAQ: { keywords: string[]; answer: string; links?: { label: string; to: st
     },
     {
         keywords: ["online", "virtual", "zoom", "format", "how does it work"],
-        answer: "All student sessions are live online via video call. You just need a computer with a webcam and microphone — no special software required! Our Corporate programs are custom-designed and hence will be online or in-person based on the needs of the business.",
+        answer: "All student sessions are live online via video call. You just need a computer with a webcam and microphone — no special software required! Our Professional programs are custom-designed and hence will be online or in-person based on the needs of the business.",
     },
     {
         keywords: ["corporate", "business", "team", "company", "employee", "training", "workplace"],
-        answer: "We offer customized corporate AI training for teams of all sizes. We're launching Summer 2026 with pilot opportunities available! Please reach out to us on the Contact Us page to sign up or learn more",
-        links: [{ label: "Corporate Training", to: "/corporate-training" }],
+        answer: "We offer customized professional AI training for teams of all sizes. We're launching Summer 2026 with pilot opportunities available! Please reach out to us on the Contact Us page to sign up or learn more",
+        links: [{ label: "Professional Training", to: "/professional-training" }],
     },
 
     {
@@ -49,7 +49,7 @@ const FAQ: { keywords: string[]; answer: string; links?: { label: string; to: st
     },
     {
         keywords: ["contact", "email", "phone", "reach", "talk", "speak", "human"],
-        answer: "You can reach us at AgenticMindsHelp@gmail.com or call/WhatsApp 480-296-1631. We respond within 24 hours on business days.",
+        answer: "You can reach us at Info@AgenticMinds.net or call/WhatsApp 480-296-1631. We respond within 24 hours on business days.",
         links: [{ label: "Contact Page", to: "/contact" }],
     },
     {
@@ -71,7 +71,7 @@ const FAQ: { keywords: string[]; answer: string; links?: { label: string; to: st
 
 const QUICK_QUESTIONS = [
     "Do you offer summer camps?",
-    "Tell me more about the Corporate Programs",
+    "Tell me more about the Professional Programs",
     "How much does it cost?",
     "Is it online?",
 ];

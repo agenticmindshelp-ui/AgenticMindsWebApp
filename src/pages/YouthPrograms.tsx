@@ -82,7 +82,7 @@ const YouthPrograms = () => {
               <div className="mt-8 flex flex-wrap gap-4">
 
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="border-primary-foreground/40 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold px-8 py-6">Sign Up for May Cohort</Button>
+                  <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold px-8 py-6 hover:opacity-90">Sign Up for May Cohort</Button>
                 </Link>
               </div>
             </div>
@@ -133,28 +133,17 @@ const YouthPrograms = () => {
       </section>
 
       {/* Program Overview */}
-      <section className="section-padding bg-surface">
+      <section className="section-padding !pt-6 !pb-6 bg-surface">
         <div className="container-narrow">
           <h2 className="text-3xl font-bold md:text-4xl text-center">Program Overview</h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            {/* Weekly */}
+          <div className="mt-12 max-w-xl mx-auto">
             <div className="rounded-2xl border border-border bg-surface p-8">
-              <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary mb-4">Option A</span>
+              <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary mb-4">May Cohort</span>
               <h3 className="text-xl font-bold">Weekly Sessions</h3>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                <li><strong>Duration:</strong> 12 weeks</li>
-                <li><strong>Schedule:</strong> 1 hour/week + optional practice</li>
-                <li><strong>Best for:</strong> Consistent learning throughout school year</li>
-              </ul>
-            </div>
-            {/* Summer */}
-            <div className="rounded-2xl border border-border bg-surface p-8">
-              <span className="inline-block rounded-full bg-secondary/10 px-3 py-1 text-xs font-bold text-secondary mb-4">Option B</span>
-              <h3 className="text-xl font-bold">Spring Break Camp 2026</h3>
-              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                <li><strong>Duration:</strong> 1 week online intensive</li>
-                <li><strong>Schedule:</strong> April 6 - April 10 2026</li>
-                <li><strong>Best for:</strong> AI Imersive spring learning experience</li>
+                <li><strong>Duration:</strong> 5 weeks</li>
+                <li><strong>Schedule:</strong> 1.5 hours/day + optional practice</li>
+                <li><strong>Best for:</strong> Consistent learning with live instructor guidance</li>
               </ul>
             </div>
           </div>
