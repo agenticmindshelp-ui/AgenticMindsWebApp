@@ -15,7 +15,6 @@ const professionalSkills = [
   { title: "Weekly Status Reporter", desc: "Compiles updates from multiple team members into a clean, formatted weekly report ready to share with leadership.", tags: ["Claude Skill", "Workflow Automation"] },
   { title: "Document Review Skill", desc: "Upload any document — a contract, PRD, brand brief, or policy — and get a structured breakdown of key points, obligations, risks, and action items tailored to what you're looking for.", tags: ["Claude Skill", "Document Analysis"] },
   { title: "Meeting Prep Assistant", desc: "Enter a meeting topic and attendees and get a tailored agenda, key questions to ask, and background context to walk in prepared.", tags: ["Claude Skill", "Workplace Automation"] },
-  { title: "End-of-Day Summariser", desc: "Paste your notes or Slack messages and get a clean, structured summary of action items, decisions made, and follow-ups — ready to send to your team.", tags: ["Claude Skill", "Productivity"] },
   { title: "Client Email Drafter", desc: "Turn rough bullet points into polished, professional client emails in your brand voice — with the right tone for any situation.", tags: ["Claude Skill", "Communication"] },
   { title: "Onboarding Guide Skill", desc: "Answers new hire questions using your company's own documentation, policies, and processes — available 24/7 without HR overhead.", tags: ["Claude Skill", "Knowledge Management"] },
 ];
