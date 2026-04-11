@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Home", to: "/" },
   { label: "Professional Workshops", to: "/professional-training" },
   { label: "Youth Programs", to: "/youth-programs" },
+  { label: "Project Showcase", to: "/project-showcase" },
   { label: "About Us", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];

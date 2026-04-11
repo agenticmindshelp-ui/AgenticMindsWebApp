@@ -16,6 +16,7 @@ import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import YouthPrograms from "./pages/YouthPrograms";
 import ProfessionalTraining from "./pages/ProfessionalTraining";
+import ProjectShowcase from "./pages/ProjectShowcase";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Enrollment from "./pages/Enrollment";
@@ -36,6 +37,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/youth-programs" element={<YouthPrograms />} />
+            <Route path="/project-showcase" element={<ProjectShowcase />} />
             <Route path="/professional-training" element={<ProfessionalTraining />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
