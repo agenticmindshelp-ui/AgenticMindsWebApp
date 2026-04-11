@@ -10,6 +10,9 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/Hero-adultsnstudents2.jpg";
 import corpImg from "@/assets/corporate-team.jpg";
+import imgChristopher from "@/assets/Christopher.png";
+import imgKabir from "@/assets/Kabir.png";
+import imgAlyssa from "@/assets/Alyssa.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -114,7 +117,7 @@ const Index = () => {
         <div className="container-narrow">
           <div className="text-center">
             <span className="inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-semibold text-accent">For Professionals</span>
-            <h2 className="mt-4 text-3xl font-bold md:text-4xl">AI Training for Professionals: Real Skills, Real Impact</h2>
+            <h2 className="mt-4 text-3xl font-bold md:text-4xl">AI Workshops for Professionals: Real Skills, Real Impact</h2>
           </div>
 
           <div className="flex flex-col gap-3 mb-6 mt-12">
@@ -127,7 +130,7 @@ const Index = () => {
                 to="/professional-training"
                 className="inline-flex items-center font-semibold text-sm hover:underline transition"
               >
-                Professional Training Info →
+                Professional Workshops Info →
               </Link>
             </div>
 
@@ -169,7 +172,7 @@ const Index = () => {
                 <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Sign Up Now</Button>
               </Link>
               <Link to="/professional-training" className="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
-                Learn More About Professional Training <ArrowRight size={14} />
+                Learn More About Professional Workshops <ArrowRight size={14} />
               </Link>
             </div>
           </div>
@@ -221,13 +224,36 @@ const Index = () => {
               </ul>
             </div>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-8">
+              <h4 className="font-bold mb-1">What Our Students Built</h4>
+              <p className="text-sm text-muted-foreground mb-4">In just 5 days, our students went from zero AI experience to building AI Agents and launching real websites. Here are a few examples of what they created.</p>
+              <div className="grid gap-4 sm:grid-cols-3">
+                {[
+                  { name: "Christopher", grade: "Grade 7", title: "Apex Basketball Academy", desc: "A promotional site for a high-performance basketball summer camp", url: "https://apex-academy-launch.lovable.app/", img: imgChristopher },
+                  { name: "Kabir", grade: "Grade 5", title: "BlastZone", desc: "An arcade-style gaming hub packed with fun shooting and action games", url: "https://scamm.lovable.app/", img: imgKabir },
+                  { name: "Alyssa", grade: "Grade 5", title: "Sip & Swirl", desc: "A stylish beverage brand site to purchase handcrafted drinks", url: "https://sip-swirl.lovable.app/", img: imgAlyssa },
+                ].map((p) => (
+                  <a key={p.name} href={p.url} target="_blank" rel="noreferrer"
+                    className="group rounded-xl border border-border overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all">
+                    <div className="aspect-video overflow-hidden bg-surface-alt">
+                      <img src={p.img} alt={p.title} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div className="p-3">
+                      <h5 className="font-bold text-sm">{p.title}</h5>
+                      <p className="text-xs text-muted-foreground mt-0.5">{p.desc}</p>
+                      <span className="text-xs font-semibold text-primary mt-1 block">{p.name} · {p.grade}</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
 
+            <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link to="/contact">
                 <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Sign Up for May Cohort</Button>
               </Link>
-              <Link to="/youth-programs" className="text-sm font-semibold text-primary hover:underline flex items-center gap-1">
-                View Full Curriculum <ArrowRight size={14} />
+              <Link to="/youth-programs#student-projects" className="text-sm font-semibold text-primary hover:underline flex items-center gap-1">
+                See All Student Projects <ArrowRight size={14} />
               </Link>
             </div>
           </div>
@@ -241,7 +267,7 @@ const Index = () => {
         <div className="container-narrow">
           <div className="text-center">
             <span className="inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-semibold text-accent">Coming Summer 2026</span>
-            <h2 className="mt-4 text-3xl font-bold md:text-4xl">Professional Training: Transform Your Team Into AI Native Leaders</h2>
+            <h2 className="mt-4 text-3xl font-bold md:text-4xl">Professional Workshops: Transform Your Team Into AI Native Leaders</h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground text-lg">
               We're launching customized professional training for small and medium sized businesses ready to transform how their teams work.
             </p>
@@ -311,7 +337,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/professional-training">
-                <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Learn More About Professional Training</Button>
+                <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Learn More About Professional Workshops</Button>
               </Link>
               {/* <Link to="/professional-training#pilot" className="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                 Apply for Pilot <ArrowRight size={14} />

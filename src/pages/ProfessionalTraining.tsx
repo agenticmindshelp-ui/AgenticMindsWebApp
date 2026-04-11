@@ -48,12 +48,12 @@ const modules = [
     usecase: "Turn a messy data export into a clean pipeline report with trends and at-risk deals flagged.",
   },
   {
-    num: 4, title: "AI Agents & Workflow Automation", day: "Day 2",
+    num: 4, title: "AI Agents & Claude Skills", day: "Day 2",
     icon: Bot,
     goals: [
-      "Build functional AI assistants loaded with your team's knowledge",
+      "Build functional AI assistants loaded with custom context for your business",
       "Create agents that can reason, remember, and take action",
-      "Deploy Skills any team member can use without technical help",
+      "Deploy Claude Skills any team member can use without technical help",
     ],
     usecase: "Deploy a Skill that any team member uses to generate on-brand marketing copy without creative review.",
   },
@@ -63,7 +63,7 @@ const modules = [
     goals: [
       "Connect AI agents to live tools using the Model Context Protocol",
       "Integrate with Google Drive, Gmail, and other business tools",
-      "Build fully automated multi-step workflows",
+      "Build fully automated multi-step agentic workflows",
     ],
     usecase: "An agent that monitors customer complaints in Gmail, pulls account data, drafts a response, and posts a summary — fully automated.",
   },
@@ -107,7 +107,7 @@ const ProfessionalTraining = () => {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="text-primary-foreground">
               <span className="inline-block rounded-full bg-accent/20 px-4 py-1 text-sm font-bold text-accent-foreground mb-4">Live Workshop May 30–31, 2026 · Limited Seats — Register Now</span>
-              <h1 className="text-4xl font-bold md:text-5xl text-balance">Professional Training: Transform Your Team Into AI Native Leaders</h1>
+              <h1 className="text-4xl font-bold md:text-5xl text-balance">Professional Workshops: Transform Your Team Into AI Native Leaders</h1>
 
               <p className="mt-3 text-sm md:text-base opacity-75">Build AI agents, automate workflows, and drive real business results</p>
               <div className="mt-8 flex flex-wrap gap-4">
@@ -245,6 +245,11 @@ const ProfessionalTraining = () => {
               );
             })}
           </div>
+          <div className="mt-10 text-center">
+            <Link to="/contact">
+              <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold px-10 py-6 hover:opacity-90">Sign Up for May Cohort</Button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -288,6 +293,19 @@ const ProfessionalTraining = () => {
         </div>
       </section>
       )}
+
+      {/* CTA Bar */}
+      <section className="gradient-primary text-primary-foreground text-center py-16 px-4">
+        <div className="container-narrow">
+          <h2 className="text-3xl font-bold md:text-4xl">Ready to Become AI Native?</h2>
+          <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">Join our May 30–31 workshop and walk away with real skills, real agents, and real results.</p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Link to="/contact">
+              <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold px-10 py-6 hover:opacity-90">Sign Up for May Cohort</Button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Waitlist */}
       {false && (

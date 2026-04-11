@@ -9,6 +9,29 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger
 } from "@/components/ui/accordion";
 import heroImg from "@/assets/hero-students.jpg";
+import imgChristopher from "@/assets/Christopher.png";
+import imgViren from "@/assets/Viren.png";
+import imgAayansh from "@/assets/Aayansh.png";
+import imgKabir from "@/assets/Kabir.png";
+import imgReyan from "@/assets/Reyan.png";
+import imgAlyssa from "@/assets/Alyssa.png";
+import imgPavan from "@/assets/Pavan.png";
+import imgRishika from "@/assets/Rishika.png";
+import imgSamir from "@/assets/Samir.png";
+import imgPranika from "@/assets/Pranika.png";
+
+const studentProjects = [
+  { name: "Reyan", grade: "Grade 6", title: "Tic Tac Toe", desc: "A classic Tic-Tac-Toe game brought to life in the browser", url: "https://tictactoereyan.lovable.app", img: imgReyan },
+  { name: "Alyssa", grade: "Grade 5", title: "Sip & Swirl", desc: "A stylish beverage brand site to purchase handcrafted drinks", url: "https://sip-swirl.lovable.app/", img: imgAlyssa },
+  { name: "Christopher", grade: "Grade 7", title: "Apex Basketball Academy", desc: "A promotional site for a high-performance basketball summer camp", url: "https://apex-academy-launch.lovable.app/", img: imgChristopher },
+  { name: "Viren", grade: "Grade 7", title: "Battleship", desc: "A fully playable browser version of the classic naval combat game", url: "https://battleshipgames.lovable.app", img: imgViren },
+  { name: "Pranika", grade: "Grade 6", title: "Trojans Court Hub", desc: "A sports team hub for schedules, news, and team highlights", url: "https://trojans-court-hub.lovable.app", img: imgPranika },
+  { name: "Kabir", grade: "Grade 5", title: "BlastZone", desc: "An arcade-style gaming hub packed with fun shooting and action games", url: "https://scamm.lovable.app/", img: imgKabir },
+  { name: "Samir", grade: "Grade 6", title: "Foodie — Two Worlds, One Kitchen", desc: "A cross-cultural culinary site celebrating the fusion of two food cultures", url: "https://golden-saffron-kitchen.lovable.app", img: imgSamir },
+  { name: "Pavan", grade: "Grade 8", title: "Time of the World", desc: "A world clock app to track current time across different time zones", url: "https://globe-clock-grid.lovable.app", img: imgPavan },
+  { name: "Rishika", grade: "Grade 6", title: "Keys to My World", desc: "A personal creative site themed around music and self-expression", url: "https://keys-to-my-world.lovable.app", img: imgRishika },
+  { name: "Aayansh", grade: "Grade 6", title: "Lego Vault", desc: "A LEGO-themed site to auction all things bricks and builds", url: "https://legovault.lovable.app", img: imgAayansh },
+];
 
 const modules = [
   {
@@ -136,7 +159,7 @@ const YouthPrograms = () => {
       <section className="section-padding !pt-6 !pb-6 bg-surface">
         <div className="container-narrow">
           <h2 className="text-3xl font-bold md:text-4xl text-center">Program Overview</h2>
-          <div className="mt-12 max-w-xl mx-auto">
+          <div className="mt-12 max-w-4xl mx-auto">
             <div className="rounded-2xl border border-border bg-surface p-8">
               <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary mb-4">May Cohort</span>
               <h3 className="text-xl font-bold">Weekly Sessions</h3>
@@ -147,40 +170,11 @@ const YouthPrograms = () => {
               </ul>
             </div>
           </div>
-          <div className="mt-8 rounded-xl bg-surface-alt p-6 text-center text-sm text-muted-foreground">
-            <strong>Requirements:</strong> Computer with internet (Mac or PC) · Webcam & microphone 
-          </div>
-        </div>
-      </section>
-
-      {/* Learning Philosophy */}
-      <section className="section-padding bg-surface-alt">
-        <div className="container-narrow">
-          <h2 className="text-3xl font-bold md:text-4xl text-center">How We Teach: Problem-Based, Not Tool-Based</h2>
-          <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-            Most AI education focuses on teaching tools. We focus on teaching thinking.
-          </p>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { icon: Brain, title: "Real Problems First", desc: "Students start with challenges they care about. AI becomes the tool to solve." },
-              { icon: Zap, title: "Hands-On Practice", desc: "Every lesson includes active problem-solving. Students create, test, iterate." },
-              { icon: Search, title: "Critical Thinking", desc: "Question AI outputs. Understand limitations and biases. Develop healthy skepticism." },
-              { icon: ShieldCheck, title: "Ethical Foundation", desc: "Responsible AI use in every lesson. Privacy, safety, integrity discussions." },
-            ].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="rounded-xl bg-surface border border-border p-6 text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 mb-4">
-                  <Icon size={28} className="text-primary" />
-                </div>
-                <h3 className="font-bold">{title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
       {/* Curriculum Modules */}
-      <section className="section-padding bg-surface">
+      <section className="section-padding !pt-4 bg-surface">
         <div className="container-narrow">
           <h2 className="text-3xl font-bold md:text-4xl text-center">Curriculum: 5 Modules</h2>
           <div className="mt-12 space-y-6 max-w-4xl mx-auto">
@@ -207,6 +201,66 @@ const YouthPrograms = () => {
                     <p className="text-sm text-muted-foreground">{mod.skills}</p>
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link to="/contact">
+              <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold px-10 py-6 hover:opacity-90">Sign Up for May Cohort</Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Student Projects */}
+      <section id="student-projects" className="section-padding !pt-2 bg-surface">
+        <div className="container-narrow">
+          <div className="text-center">
+            <span className="inline-block rounded-full bg-secondary/10 px-4 py-1 text-sm font-semibold text-secondary mb-4">Spring Break Camp 2026</span>
+            <h2 className="text-3xl font-bold md:text-4xl">What Our Students Built</h2>
+            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">In just 5 days, our students went from zero AI experience to building AI Agents and launching real websites. Here are a few examples of what they created.</p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {studentProjects.map((project) => (
+              <a key={project.name} href={project.url} target="_blank" rel="noreferrer"
+                className="group rounded-2xl border border-border bg-surface overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all">
+                <div className="aspect-video overflow-hidden bg-surface-alt">
+                  <img src={project.img} alt={project.title} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-base">{project.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{project.desc}</p>
+                  <div className="mt-3 flex items-center justify-between">
+                    <span className="text-xs font-semibold text-primary">{project.name} · {project.grade}</span>
+                    <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors">View site →</span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Learning Philosophy */}
+      <section className="section-padding bg-surface-alt">
+        <div className="container-narrow">
+          <h2 className="text-3xl font-bold md:text-4xl text-center">How We Teach: Problem-Based, Not Tool-Based</h2>
+          <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
+            Most AI education focuses on teaching tools. We focus on teaching thinking.
+          </p>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: Brain, title: "Real Problems First", desc: "Students start with challenges they care about. AI becomes the tool to solve." },
+              { icon: Zap, title: "Hands-On Practice", desc: "Every lesson includes active problem-solving. Students create, test, iterate." },
+              { icon: Search, title: "Critical Thinking", desc: "Question AI outputs. Understand limitations and biases. Develop healthy skepticism." },
+              { icon: ShieldCheck, title: "Ethical Foundation", desc: "Responsible AI use in every lesson. Privacy, safety, integrity discussions." },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="rounded-xl bg-surface border border-border p-6 text-center">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 mb-4">
+                  <Icon size={28} className="text-primary" />
+                </div>
+                <h3 className="font-bold">{title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
               </div>
             ))}
           </div>
@@ -315,7 +369,7 @@ const YouthPrograms = () => {
       <section className="section-padding gradient-primary text-primary-foreground text-center">
         <div className="container-narrow">
           <h2 className="text-3xl font-bold md:text-4xl">Ready to Start?</h2>
-          <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">Join our Spring cohort and give your child the AI native skills they need to thrive.</p>
+          <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">Join our May cohort and give your child the AI native skills they need to thrive.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
 
             <Link to="/contact">
