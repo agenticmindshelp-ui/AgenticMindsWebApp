@@ -1,4 +1,4 @@
-import { Bot, Brain, Globe, ImageIcon } from "lucide-react";
+import { Bot, Brain, Globe, ImageIcon, Sparkles } from "lucide-react";
 import imgChristopher from "@/assets/Christopher.png";
 import imgViren from "@/assets/Viren.png";
 import imgAayansh from "@/assets/Aayansh.png";
@@ -9,6 +9,15 @@ import imgPavan from "@/assets/Pavan.png";
 import imgRishika from "@/assets/Rishika.png";
 import imgSamir from "@/assets/Samir.png";
 import imgPranika from "@/assets/Pranika.png";
+
+const professionalSkills = [
+  { title: "Weekly Status Reporter", desc: "Compiles updates from multiple team members into a clean, formatted weekly report ready to share with leadership.", tags: ["Claude Skill", "Workflow Automation"] },
+  { title: "Client Email Drafter", desc: "Turn rough bullet points into polished, professional client emails in your brand voice — with the right tone for any situation.", tags: ["Claude Skill", "Communication"] },
+  { title: "Meeting Prep Assistant", desc: "Enter a meeting topic and attendees and get a tailored agenda, key questions to ask, and background context to walk in prepared.", tags: ["Claude Skill", "Workplace Automation"] },
+  { title: "End-of-Day Summariser", desc: "Paste your notes or Slack messages and get a clean, structured summary of action items, decisions made, and follow-ups — ready to send to your team.", tags: ["Claude Skill", "Productivity"] },
+  { title: "Document Review Skill", desc: "Upload any document — a contract, PRD, brand brief, or policy — and get a structured breakdown of key points, obligations, risks, and action items tailored to what you're looking for.", tags: ["Claude Skill", "Document Analysis"] },
+  { title: "Onboarding Guide Skill", desc: "Answers new hire questions using your company's own documentation, policies, and processes — available 24/7 without HR overhead.", tags: ["Claude Skill", "Knowledge Management"] },
+];
 
 const websites = [
   { name: "Reyan", grade: "Grade 6", title: "Tic Tac Toe", desc: "A classic Tic-Tac-Toe game brought to life in the browser", url: "https://tictactoereyan.lovable.app", img: imgReyan },
@@ -44,8 +53,37 @@ const ProjectShowcase = () => {
         <div className="container-narrow relative px-4 py-20 md:py-28 text-primary-foreground text-center">
           <h1 className="text-4xl font-bold md:text-5xl text-balance">Project Showcase</h1>
           <p className="mt-6 text-lg opacity-90 max-w-2xl mx-auto">
-            Real projects built by real students. From websites to AI agents to trained machine learning models — here's what our community has created.
+            Real projects built by real people. From professional AI Skills to student-built websites, trained models, and autonomous agents — here's what our community has created.
           </p>
+        </div>
+      </section>
+
+      {/* Professional Skills */}
+      <section className="section-padding !pt-6 bg-surface-alt">
+        <div className="container-narrow">
+          <div className="text-center">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 mb-4">
+              <Sparkles size={28} className="text-primary" />
+            </div>
+            <h2 className="text-3xl font-bold md:text-4xl">Professional AI Skills</h2>
+            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Built by professionals — real workplace tools that save hours every week. Each Skill runs inside Claude and can be used by anyone on the team, no technical setup required.</p>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {professionalSkills.map((skill) => (
+              <div key={skill.title} className="rounded-2xl border border-border bg-surface p-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 mb-4">
+                  <Sparkles size={24} className="text-primary" />
+                </div>
+                <h3 className="font-bold text-base">{skill.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{skill.desc}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {skill.tags.map((tag) => (
+                    <span key={tag} className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -141,11 +179,14 @@ const ProjectShowcase = () => {
       {/* CTA */}
       <section className="section-padding gradient-primary text-primary-foreground text-center">
         <div className="container-narrow">
-          <h2 className="text-3xl font-bold md:text-4xl">Want Your Child to Build Like This?</h2>
-          <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">Join our May cohort and give your child the skills to build real AI projects.</p>
+          <h2 className="text-3xl font-bold md:text-4xl">Ready to Build Something Like This?</h2>
+          <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">Whether you're a professional looking to work smarter or a parent investing in your child's future — we have a program for you.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a href="/contact">
-              <button className="gradient-accent border-0 text-accent-foreground font-bold px-10 py-4 rounded-lg hover:opacity-90 text-lg">Sign Up for May Cohort</button>
+              <button className="bg-white/20 border border-white/40 text-primary-foreground font-bold px-8 py-4 rounded-lg hover:bg-white/30 text-base">Professional Workshops</button>
+            </a>
+            <a href="/contact">
+              <button className="gradient-accent border-0 text-accent-foreground font-bold px-8 py-4 rounded-lg hover:opacity-90 text-base">Youth Programs</button>
             </a>
           </div>
         </div>
