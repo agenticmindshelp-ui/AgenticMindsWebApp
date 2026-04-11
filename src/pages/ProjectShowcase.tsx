@@ -11,11 +11,12 @@ import imgSamir from "@/assets/Samir.png";
 import imgPranika from "@/assets/Pranika.png";
 
 const professionalSkills = [
+  { title: "Business Context Skill", desc: "Load your company's brand voice, internal processes, or client history into a Skill so every output reflects your business specifically — not a generic AI response.", tags: ["Claude Skill", "Context-Aware"] },
   { title: "Weekly Status Reporter", desc: "Compiles updates from multiple team members into a clean, formatted weekly report ready to share with leadership.", tags: ["Claude Skill", "Workflow Automation"] },
-  { title: "Client Email Drafter", desc: "Turn rough bullet points into polished, professional client emails in your brand voice — with the right tone for any situation.", tags: ["Claude Skill", "Communication"] },
+  { title: "Document Review Skill", desc: "Upload any document — a contract, PRD, brand brief, or policy — and get a structured breakdown of key points, obligations, risks, and action items tailored to what you're looking for.", tags: ["Claude Skill", "Document Analysis"] },
   { title: "Meeting Prep Assistant", desc: "Enter a meeting topic and attendees and get a tailored agenda, key questions to ask, and background context to walk in prepared.", tags: ["Claude Skill", "Workplace Automation"] },
   { title: "End-of-Day Summariser", desc: "Paste your notes or Slack messages and get a clean, structured summary of action items, decisions made, and follow-ups — ready to send to your team.", tags: ["Claude Skill", "Productivity"] },
-  { title: "Document Review Skill", desc: "Upload any document — a contract, PRD, brand brief, or policy — and get a structured breakdown of key points, obligations, risks, and action items tailored to what you're looking for.", tags: ["Claude Skill", "Document Analysis"] },
+  { title: "Client Email Drafter", desc: "Turn rough bullet points into polished, professional client emails in your brand voice — with the right tone for any situation.", tags: ["Claude Skill", "Communication"] },
   { title: "Onboarding Guide Skill", desc: "Answers new hire questions using your company's own documentation, policies, and processes — available 24/7 without HR overhead.", tags: ["Claude Skill", "Knowledge Management"] },
 ];
 
@@ -66,7 +67,8 @@ const ProjectShowcase = () => {
               <Sparkles size={28} className="text-primary" />
             </div>
             <h2 className="text-3xl font-bold md:text-4xl">Professional AI Skills</h2>
-            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Built by professionals — real workplace tools that save hours every week. Each Skill runs inside Claude and can be used by anyone on the team, no technical setup required.</p>
+            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Built by professionals — real workplace tools that save hours every week.</p>
+            <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">Each Skill is loaded with your company's context — brand guidelines, processes, client history — so outputs are always relevant to your business, not just generic AI.</p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {professionalSkills.map((skill) => (
