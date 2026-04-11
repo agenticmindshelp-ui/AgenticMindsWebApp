@@ -5,7 +5,7 @@ import {
   GraduationCap, Monitor, Users, Brain, ShieldCheck, FolderOpen,
   Building2, Lightbulb, Target, BarChart3, Briefcase, Rocket,
   CheckCircle2, ArrowRight, Zap, BookOpen, Award,
-  Eye,
+  Eye, Sparkles,
   Space
 } from "lucide-react";
 import heroImg from "@/assets/Hero-adultsnstudents2.jpg";
@@ -113,22 +113,22 @@ const Index = () => {
       </section>
 
       {/* ===== PROFESSIONAL TRAINING ===== */}
-      <section className="section-padding !pt-10 bg-surface">
+      <section className="section-padding !pt-10 gradient-primary text-primary-foreground">
         <div className="container-narrow">
           <div className="text-center">
-            <span className="inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-semibold text-accent">For Professionals</span>
+            <span className="inline-block rounded-full bg-white/20 px-4 py-1 text-sm font-semibold text-primary-foreground">For Professionals</span>
             <h2 className="mt-4 text-3xl font-bold md:text-4xl">AI Workshops for Professionals: Real Skills, Real Impact</h2>
           </div>
 
           <div className="flex flex-col gap-3 mb-6 mt-12">
             <div className="flex flex-wrap items-center gap-3">
-              <span className="rounded-full gradient-primary px-4 py-1 text-sm font-bold text-primary-foreground inline-block">
+              <span className="rounded-full bg-accent/30 px-4 py-1 text-sm font-bold text-primary-foreground inline-block">
                 AI TRAINING WORKSHOP MAY 30TH – 31ST, 2026
               </span>
 
               <Link
                 to="/professional-training"
-                className="inline-flex items-center font-semibold text-sm hover:underline transition"
+                className="inline-flex items-center font-semibold text-sm opacity-80 hover:opacity-100 transition"
               >
                 Professional Workshops Info →
               </Link>
@@ -138,40 +138,53 @@ const Index = () => {
               {[
                 { icon: Brain, title: "AI Foundations & Prompt Engineering", desc: "Understand how LLMs and agents work, then master RICE and chain-of-thought frameworks to generate PRDs, briefs, and sales sequences in minutes" },
                 { icon: BarChart3, title: "AI-Powered Data & Analysis", desc: "Use AI with Excel and Google Sheets to clean, analyse, and report on data instantly — turn messy exports into polished pipeline reports" },
-                { icon: Zap, title: "AI Agents & Connected Workflows", desc: "Build AI assistants loaded with your team's knowledge and connect them to live tools like Gmail and Google Drive using the Model Context Protocol" },
+                { icon: Zap, title: "AI Agents & Claude Skills", desc: "Build AI assistants loaded with your team's knowledge and connect them to live tools like Gmail and Google Drive using the Model Context Protocol" },
                 { icon: Monitor, title: "Vibe Coding", desc: "Describe what you want in plain English and build a working app or internal tool — no coding experience required" },
               ].map(({ icon: Icon, title, desc }) => (
                 <div key={title} className="flex gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-white/10">
                     <Icon size={24} className="text-accent" />
                   </div>
                   <div>
                     <h4 className="font-bold">{title}</h4>
-                    <p className="mt-1 text-sm text-muted-foreground">{desc}</p>
+                    <p className="mt-1 text-sm opacity-70">{desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 rounded-xl bg-surface-alt p-6">
-              <h4 className="font-bold mb-3">By the end of this workshop, you will:</h4>
-              <ul className="grid gap-2 sm:grid-cols-2 text-sm text-muted-foreground">
+            <div className="mt-8">
+              <h4 className="font-bold mb-1">What You'll Build</h4>
+              <p className="text-sm opacity-70 mb-4">Walk away with real AI Skills you can deploy to your team from day one.</p>
+              <div className="grid gap-4 sm:grid-cols-3">
                 {[
-                  "Generate PRDs, marketing briefs, and sales sequences in 30 minutes instead of 6–8 hours",
-                  "Turn messy data exports into clean pipeline reports with trends and at-risk deals flagged",
-                  "Deploy an AI Skill any team member uses to generate on-brand content without creative review",
-                  "Build a working internal app or tool — ready to demo — with zero coding experience",
-                ].map((o) => (
-                  <li key={o} className="flex items-start gap-2"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-success" />{o}</li>
+                  { title: "Business Context Skill", desc: "Load your brand voice, processes, or client history so every AI output reflects your business — not generic AI.", tags: ["Claude Skill", "Context-Aware"] },
+                  { title: "Document Review Skill", desc: "Upload any doc — contract, PRD, or brand brief — and get a breakdown of key points, risks, red flags and open questions to follow up on — based on your business's context.", tags: ["Claude Skill", "Document Analysis"] },
+                  { title: "Internal Tool Builder", desc: "Describe what you want in plain English and build a working internal app or tool — ready to demo — with zero coding experience.", tags: ["Vibe Coding"] },
+                ].map((skill) => (
+                  <div key={skill.title} className="rounded-xl border border-white/10 bg-white/10 p-4">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10">
+                        <Sparkles size={20} className="text-accent" />
+                      </div>
+                      <h5 className="font-bold text-sm">{skill.title}</h5>
+                    </div>
+                    <p className="text-xs opacity-70 mt-1">{skill.desc}</p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {skill.tags.map((tag) => (
+                        <span key={tag} className="rounded-full bg-accent/20 px-3 py-1 text-xs font-semibold text-accent">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="font-semibold px-8 py-6">Sign Up Now</Button>
+                <Button size="lg" className="gradient-accent border-0 text-accent-foreground font-bold px-8 py-6 hover:opacity-90">Sign Up Now</Button>
               </Link>
-              <Link to="/professional-training" className="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+              <Link to="/professional-training" className="text-sm font-semibold opacity-80 hover:opacity-100 flex items-center gap-1">
                 Learn More About Professional Workshops <ArrowRight size={14} />
               </Link>
             </div>
