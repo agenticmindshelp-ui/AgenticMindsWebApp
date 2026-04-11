@@ -183,7 +183,7 @@ const ProjectShowcase = () => {
           <p className="mt-4 text-lg opacity-90 max-w-xl mx-auto">Whether you're a professional looking to work smarter or a parent investing in your child's future — we have a program for you.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a href="/contact">
-              <button className="bg-white/20 border border-white/40 text-primary-foreground font-bold px-8 py-4 rounded-lg hover:bg-white/30 text-base">Professional Workshops</button>
+              <button className="gradient-accent border-0 text-accent-foreground font-bold px-8 py-4 rounded-lg hover:opacity-90 text-base">Professional Workshops</button>
             </a>
             <a href="/contact">
               <button className="gradient-accent border-0 text-accent-foreground font-bold px-8 py-4 rounded-lg hover:opacity-90 text-base">Youth Programs</button>
