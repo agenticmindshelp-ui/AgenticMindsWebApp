@@ -11,7 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import {
   Building2, Users, Target, BarChart3, Rocket, CheckCircle2,
   Monitor, BookOpen, Lightbulb, Brain, ShieldCheck, TrendingUp, ArrowRight,
-  Zap, Database, Bot, Code2
+  Zap, Database, Bot, Code2, Sparkles
 } from "lucide-react";
 
 const modules = [
@@ -78,6 +78,15 @@ const modules = [
     usecase: "A product manager builds a customer feedback tracker with tagging and priority scoring in 45 minutes — ready to demo.",
   },
 ];
+const professionalSkills = [
+  { title: "Weekly Status Reporter", desc: "Compiles updates from multiple team members into a clean, formatted weekly report ready to share with leadership.", tags: ["Claude Skill", "Workflow Automation"] },
+  { title: "Client Email Drafter", desc: "Turn rough bullet points into polished, professional client emails in your brand voice — with the right tone for any situation.", tags: ["Claude Skill", "Communication"] },
+  { title: "Meeting Prep Assistant", desc: "Enter a meeting topic and attendees and get a tailored agenda, key questions to ask, and background context to walk in prepared.", tags: ["Claude Skill", "Workplace Automation"] },
+  { title: "End-of-Day Summariser", desc: "Paste your notes or Slack messages and get a clean, structured summary of action items, decisions made, and follow-ups — ready to send to your team.", tags: ["Claude Skill", "Productivity"] },
+  { title: "Document Review Skill", desc: "Upload any document — a contract, PRD, brand brief, or policy — and get a structured breakdown of key points, obligations, risks, and action items tailored to what you're looking for.", tags: ["Claude Skill", "Document Analysis"] },
+  { title: "Onboarding Guide Skill", desc: "Answers new hire questions using your company's own documentation, policies, and processes — available 24/7 without HR overhead.", tags: ["Claude Skill", "Knowledge Management"] },
+];
+
 import { toast } from "sonner";
 import corpImg from "@/assets/corporate-team.jpg";
 
@@ -293,6 +302,35 @@ const ProfessionalTraining = () => {
         </div>
       </section>
       )}
+
+      {/* Professional AI Skills */}
+      <section className="section-padding !pt-6 bg-surface">
+        <div className="container-narrow">
+          <div className="text-center">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 mb-4">
+              <Sparkles size={28} className="text-primary" />
+            </div>
+            <h2 className="text-3xl font-bold md:text-4xl">Professional AI Skills</h2>
+            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Examples of what workshop participants build — real workplace tools that save hours every week. Each Skill runs inside Claude and can be used by anyone on the team, no technical setup required.</p>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {professionalSkills.map((skill) => (
+              <div key={skill.title} className="rounded-2xl border border-border bg-surface-alt p-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 mb-4">
+                  <Sparkles size={24} className="text-primary" />
+                </div>
+                <h3 className="font-bold text-base">{skill.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{skill.desc}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {skill.tags.map((tag) => (
+                    <span key={tag} className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Bar */}
       <section className="gradient-primary text-primary-foreground text-center py-16 px-4">
